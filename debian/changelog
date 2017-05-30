@@ -1,0 +1,5 @@
+qubes-meta-packages (3.2.0-1) jessie; urgency=medium
+
+  * Initial release.
+
+ -- Marek Marczykowski-Górecki <marmarek@invisiblethingslab.com>  Tue, 25 Apr 2017 04:53:15 +0200

@@ -1,0 +1,45 @@
+Source: qubes-meta-packages
+Section: admin
+Priority: extra
+Maintainer: Marek Marczykowski-Górecki <marmarek@invisiblethingslab.com>
+Standards-Version: 3.9.5
+Homepage: https://www.qubes-os.org
+Vcs-Git: https://github.com/QubesOS/qubes-meta-packages
+
+Package: qubes-repo-contrib
+Architecture: any
+Description: Repository definition for packages contributed to Qubes OS
+ Contrib repository contains packages written/adopted specifically for Qubes,
+ not available in upstream repositories.
+
+Package: qubes-vm-dependencies
+Architecture: any
+Depends:
+    qubes-core-agent,
+    qubes-gui-agent,
+    sudo,
+    systemd,
+    ${misc:Depends}
+Recommends:
+    qubes-vm-recommended
+Description: Meta package with packages required in Qubes VM
+ This package depends on packages required to be installed in Qubes VM.
+
+Package: qubes-vm-recommended
+Architecture: any
+Depends:
+    cups,
+    gnome-terminal,
+    gnome-themes-standard,
+    network-manager (>= 0.8.1-1),
+    network-manager-gnome,
+    haveged,
+    libnotify-bin,
+    locales,
+    locales-all,
+    mate-notification-daemon,
+    ncurses-term,
+    qubes-mgmt-salt-vm-connector,
+Description: Meta package with packages recommended in Qubes VM
+ Installing this package is recommended to have full functionality available in
+ Qubes VM.

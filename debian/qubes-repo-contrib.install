@@ -1,0 +1,2 @@
+etc/apt/sources.list.d/qubes-contrib-r3.2.list
+etc/apt/trusted.gpg.d/qubes-3-contrib-keyring.gpg

@@ -1,0 +1,13 @@
+[qubes-contrib-vm-r3.2-current]
+name = Qubes OS Contrib Repository for VM (updates)
+baseurl = http://yum.qubes-os.org/r3.2-contrib/current/vm/fc$releasever
+gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-qubes-3-contrib
+gpgcheck = 1
+enabled=1
+
+[qubes-contrib-vm-r3.2-current-testing]
+name = Qubes OS Contrib Repository for VM (updates-testing)
+baseurl = http://yum.qubes-os.org/r3.2-contrib/current-testing/vm/fc$releasever
+gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-qubes-3-contrib
+gpgcheck = 1
+enabled=0
