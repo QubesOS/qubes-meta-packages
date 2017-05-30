@@ -14,8 +14,8 @@ URL:		https://www.qubes-os.org/
 
 %package -n qubes-vm-dependencies
 Summary:    Meta package with packages required in Qubes VM
-Requires:   qubes-core-agent
-Requires:   qubes-gui-agent
+Requires:   qubes-core-vm
+Requires:   qubes-gui-vm
 
 %description -n qubes-vm-dependencies
 This package depends on packages required to be installed in Qubes VM.
