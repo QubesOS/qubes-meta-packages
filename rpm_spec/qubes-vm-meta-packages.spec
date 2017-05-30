@@ -23,6 +23,11 @@ This package depends on packages required to be installed in Qubes VM.
 %package -n qubes-vm-recommended
 Summary:    Meta package with packages recommended in Qubes VM
 Requires:   mate-notification-daemon
+Requires:   pulseaudio-qubes
+Requires:   qubes-core-agent-dom0-updates
+Requires:   qubes-core-agent-nautilus
+Requires:   qubes-core-agent-network-manager
+Requires:   qubes-core-agent-networking
 Requires:   qubes-mgmt-salt-vm-connector
 
 %description -n qubes-vm-recommended
