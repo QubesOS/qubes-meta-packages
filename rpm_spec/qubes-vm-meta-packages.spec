@@ -15,7 +15,9 @@ URL:		https://www.qubes-os.org/
 %package -n qubes-vm-dependencies
 Summary:    Meta package with packages required in Qubes VM
 Requires:   qubes-core-agent
+Requires:   qubes-core-agent-systemd
 Requires:   qubes-gui-agent
+Requires:   xen-qubes-vm
 
 %description -n qubes-vm-dependencies
 This package depends on packages required to be installed in Qubes VM.
@@ -28,7 +30,13 @@ Requires:   qubes-core-agent-dom0-updates
 Requires:   qubes-core-agent-nautilus
 Requires:   qubes-core-agent-network-manager
 Requires:   qubes-core-agent-networking
+Requires:   qubes-gpg-split
+Requires:   qubes-img-converter
+Requires:   qubes-input-proxy-sender
 Requires:   qubes-mgmt-salt-vm-connector
+Requires:   qubes-pdf-converter
+Requires:   qubes-usb-proxy
+Requires:   thunderbird-qubes
 
 %description -n qubes-vm-recommended
 Installing this package is recommended to have full functionality available in

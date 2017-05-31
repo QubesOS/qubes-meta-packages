@@ -44,7 +44,12 @@ Depends:
     qubes-core-agent-nautilus,
     qubes-core-agent-network-manager,
     qubes-core-agent-networking,
+    qubes-gpg-split,
+    qubes-img-converter,
+    qubes-input-proxy-sender,
     qubes-mgmt-salt-vm-connector,
+    qubes-pdf-converter,
+    qubes-thunderbird,
 Description: Meta package with packages recommended in Qubes VM
  Installing this package is recommended to have full functionality available in
  Qubes VM.
