@@ -15,7 +15,9 @@ URL:		https://www.qubes-os.org/
 %package -n qubes-vm-dependencies
 Summary:    Meta package with packages required in Qubes VM
 Requires:   qubes-core-vm
+Requires:   qubes-core-vm-systemd
 Requires:   qubes-gui-vm
+Requires:   xen-qubes-vm
 
 %description -n qubes-vm-dependencies
 This package depends on packages required to be installed in Qubes VM.
@@ -23,7 +25,13 @@ This package depends on packages required to be installed in Qubes VM.
 %package -n qubes-vm-recommended
 Summary:    Meta package with packages recommended in Qubes VM
 Requires:   mate-notification-daemon
+Requires:   qubes-gpg-split
+Requires:   qubes-img-converter
+Requires:   qubes-input-proxy-sender
 Requires:   qubes-mgmt-salt-vm-connector
+Requires:   qubes-pdf-converter
+Requires:   qubes-usb-proxy
+Requires:   thunderbird-qubes
 
 %description -n qubes-vm-recommended
 Installing this package is recommended to have full functionality available in

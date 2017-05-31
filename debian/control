@@ -31,15 +31,20 @@ Depends:
     cups,
     gnome-terminal,
     gnome-themes-standard,
-    network-manager (>= 0.8.1-1),
-    network-manager-gnome,
     haveged,
     libnotify-bin,
     locales,
     locales-all,
     mate-notification-daemon,
     ncurses-term,
+    network-manager (>= 0.8.1-1),
+    network-manager-gnome,
+    qubes-gpg-split,
+    qubes-img-converter,
+    qubes-input-proxy-sender,
     qubes-mgmt-salt-vm-connector,
+    qubes-pdf-converter,
+    qubes-thunderbird,
 Description: Meta package with packages recommended in Qubes VM
  Installing this package is recommended to have full functionality available in
  Qubes VM.
