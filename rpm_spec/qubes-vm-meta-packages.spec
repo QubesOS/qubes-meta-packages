@@ -73,5 +73,9 @@ make -C repos install-vm-fedora DESTDIR=$RPM_BUILD_ROOT
 /etc/pki/rpm-gpg/RPM-GPG-KEY-qubes-3.2-contrib
 /etc/pki/rpm-gpg/RPM-GPG-KEY-qubes-3-contrib
 
+%files -n qubes-vm-dependencies
+
+%files -n qubes-vm-recommended
+
 %changelog
 
