@@ -69,9 +69,9 @@ ln -sf . %{name}-%{version}
 make -C repos install-vm-fedora DESTDIR=$RPM_BUILD_ROOT
 
 %files -n qubes-repo-contrib
-%config(noreplace) /etc/yum.repos.d/qubes-contrib-vm-r3.2.repo
-/etc/pki/rpm-gpg/RPM-GPG-KEY-qubes-3.2-contrib
-/etc/pki/rpm-gpg/RPM-GPG-KEY-qubes-3-contrib
+%config(noreplace) /etc/yum.repos.d/qubes-contrib-vm-r4.0.repo
+/etc/pki/rpm-gpg/RPM-GPG-KEY-qubes-4.0-contrib
+/etc/pki/rpm-gpg/RPM-GPG-KEY-qubes-4-contrib
 
 %files -n qubes-vm-dependencies
 
