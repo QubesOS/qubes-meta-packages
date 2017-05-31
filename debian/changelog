@@ -1,3 +1,11 @@
+qubes-meta-packages (3.2.2-1) unstable; urgency=medium
+
+  * Add more required/recommended packages
+  * rpm: recommend qubes-doc-vm
+  * rpm: actually build meta packages
+
+ -- Marek Marczykowski-Górecki <marmarek@invisiblethingslab.com>  Wed, 31 May 2017 05:07:30 +0200
+
 qubes-meta-packages (3.2.1-1) unstable; urgency=medium
 
   * rpm: fix package names in Fedora
