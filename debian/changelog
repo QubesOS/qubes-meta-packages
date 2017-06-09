@@ -1,3 +1,15 @@
+qubes-meta-packages (4.0.0-1) unstable; urgency=medium
+
+  * Adjust for package split in Qubes 4.0
+  * travis: adjust for Qubes 4.0
+  * Add more required/recommended packages
+  * rpm: actually build meta packages
+  * Switch contrib repository definitions to Qubes 4.0
+  * Install qubes-core-agent-passwordless-root by default in full
+    template
+
+ -- Marek Marczykowski-Górecki <marmarek@invisiblethingslab.com>  Sat, 10 Jun 2017 01:38:01 +0200
+
 qubes-meta-packages (3.2.0-1) jessie; urgency=medium
 
   * Initial release.
