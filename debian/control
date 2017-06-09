@@ -44,6 +44,7 @@ Depends:
     qubes-core-agent-nautilus,
     qubes-core-agent-network-manager,
     qubes-core-agent-networking,
+    qubes-core-agent-passwordless-root,
     qubes-gpg-split,
     qubes-img-converter,
     qubes-input-proxy-sender,

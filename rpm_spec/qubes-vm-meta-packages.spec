@@ -30,6 +30,7 @@ Requires:   qubes-core-agent-dom0-updates
 Requires:   qubes-core-agent-nautilus
 Requires:   qubes-core-agent-network-manager
 Requires:   qubes-core-agent-networking
+Requires:   qubes-core-agent-passwordless-root
 Requires:   qubes-gpg-split
 Requires:   qubes-img-converter
 Requires:   qubes-input-proxy-sender
