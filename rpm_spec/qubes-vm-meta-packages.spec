@@ -24,7 +24,7 @@ This package depends on packages required to be installed in Qubes VM.
 
 %package -n qubes-vm-recommended
 Summary:    Meta package with packages recommended in Qubes VM
-Requires:   qubes-doc-vm
+Requires:   qubes-core-vm-doc
 Requires:   mate-notification-daemon
 Requires:   qubes-gpg-split
 Requires:   qubes-img-converter
