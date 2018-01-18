@@ -1,3 +1,9 @@
+qubes-meta-packages (4.0.1-1) unstable; urgency=medium
+
+  * Add python2-qubesimgconverter for qubes-img-converter
+
+ -- Marek Marczykowski-Górecki <marmarek@invisiblethingslab.com>  Thu, 18 Jan 2018 18:36:07 +0100
+
 qubes-meta-packages (4.0.0-1) unstable; urgency=medium
 
   * Adjust for package split in Qubes 4.0
