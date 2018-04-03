@@ -70,4 +70,4 @@ make -C repos install-vm-fedora DESTDIR=$RPM_BUILD_ROOT
 %files -n qubes-vm-recommended
 
 %changelog
-
+@CHANGELOG@
