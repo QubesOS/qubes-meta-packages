@@ -1,3 +1,14 @@
+qubes-meta-packages (4.0.2-1) unstable; urgency=medium
+
+  [ Frédéric Pierret ]
+  * Create .spec.in and Source0
+  * spec.in: add changelog placeholder
+
+  [ Marek Marczykowski-Górecki ]
+  * travis: update fedora versions
+
+ -- Marek Marczykowski-Górecki <marmarek@invisiblethingslab.com>  Thu, 03 May 2018 04:26:32 +0200
+
 qubes-meta-packages (4.0.1-1) unstable; urgency=medium
 
   * Add python2-qubesimgconverter for qubes-img-converter
