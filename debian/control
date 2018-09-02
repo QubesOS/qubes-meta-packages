@@ -51,6 +51,7 @@ Depends:
     qubes-mgmt-salt-vm-connector,
     qubes-pdf-converter,
     qubes-thunderbird,
+    qubes-usb-proxy
 Description: Meta package with packages recommended in Qubes VM
  Installing this package is recommended to have full functionality available in
  Qubes VM.
