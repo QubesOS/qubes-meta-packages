@@ -1,3 +1,10 @@
+qubes-meta-packages (4.0.3-1) unstable; urgency=medium
+
+  [ unman ]
+  * Include qubes-usb-proxy within qubes-recommended
+
+ -- Marek Marczykowski-Górecki <marmarek@invisiblethingslab.com>  Thu, 13 Sep 2018 14:33:44 +0200
+
 qubes-meta-packages (4.0.2-1) unstable; urgency=medium
 
   [ Frédéric Pierret ]
