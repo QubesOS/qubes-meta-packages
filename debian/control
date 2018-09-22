@@ -5,6 +5,8 @@ Maintainer: Marek Marczykowski-Górecki <marmarek@invisiblethingslab.com>
 Standards-Version: 3.9.5
 Homepage: https://www.qubes-os.org
 Vcs-Git: https://github.com/QubesOS/qubes-meta-packages
+Build-Depends:
+  debhelper
 
 Package: qubes-repo-contrib
 Architecture: any
