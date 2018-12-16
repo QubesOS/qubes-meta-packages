@@ -3,9 +3,9 @@ install-vm-debian:
 	sed -e "s/@DIST@/`lsb_release -cs`/" qubes-contrib-r4.0.list.in \
 		> $(DESTDIR)/etc/apt/sources.list.d/qubes-contrib-r4.0.list
 	install -d $(DESTDIR)/etc/apt/trusted.gpg.d
-	gpg --no-default-keyring --keyring \
+	gpg --dearmor --output \
 		$(DESTDIR)/etc/apt/trusted.gpg.d/qubes-4-contrib-keyring.gpg \
-		--import qubes-contrib-debian-4.asc
+		qubes-contrib-debian-4.asc
 
 install-vm-fedora: install-fedora
 	install -d $(DESTDIR)/etc/yum.repos.d
