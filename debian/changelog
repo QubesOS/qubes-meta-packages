@@ -1,3 +1,10 @@
+qubes-meta-packages (4.0.5-1) unstable; urgency=medium
+
+  * debian: add Build-Depends: gnupg
+  * debian: use gpg --dearmor instead of gpg --import
+
+ -- Marek Marczykowski-Górecki <marmarek@invisiblethingslab.com>  Tue, 19 Feb 2019 17:20:43 +0100
+
 qubes-meta-packages (4.0.4-1) unstable; urgency=medium
 
   [ unman ]
