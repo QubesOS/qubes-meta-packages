@@ -15,7 +15,7 @@ Summary:    Meta package with packages required in Qubes VM
 Requires:   qubes-core-agent
 Requires:   qubes-core-agent-systemd
 Requires:   qubes-gui-agent
-Requires:   xen-qubes-vm
+Requires:   xen-runtime
 
 %description -n qubes-vm-dependencies
 This package depends on packages required to be installed in Qubes VM.
