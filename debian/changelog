@@ -1,3 +1,10 @@
+qubes-meta-packages (4.1.1-1) unstable; urgency=medium
+
+  * Update contrib repositories to R4.1
+  * debian: update file list
+
+ -- Marek Marczykowski-Górecki <marmarek@invisiblethingslab.com>  Tue, 26 Feb 2019 13:19:01 +0100
+
 qubes-meta-packages (4.1.0-1) unstable; urgency=medium
 
   [ Frédéric Pierret (fepitre) ]
