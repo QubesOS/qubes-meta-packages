@@ -1,3 +1,4 @@
+RPM_SPEC_FILES.dom0 := rpm_spec/qubes-dom0-meta-packages.spec
 RPM_SPEC_FILES.vm := rpm_spec/qubes-vm-meta-packages.spec
 DEBIAN_BUILD_DIRS.vm := debian
 
