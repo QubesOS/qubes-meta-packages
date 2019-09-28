@@ -1,0 +1,37 @@
+Name:		qubes-dom0-meta-packages
+Version:	@VERSION@
+Release:	1%{?dist}
+Summary:	Meta packages for Qubes-specific components
+BuildArch:  noarch
+
+Group:		System Environment/Base
+License:	GPLv2+
+URL:		https://www.qubes-os.org/
+
+Source0: %{name}-%{version}.tar.gz
+
+%description
+Meta packages for easy maintenance of installed Qubes OS specific packages.
+
+%package -n qubes-repo-contrib
+Summary: Repository definition for packages contributed to Qubes OS
+
+%description -n qubes-repo-contrib
+Contrib repository contains packages written/adopted specifically for Qubes,
+not available in upstream repositories.
+
+%prep
+%setup -q
+
+%build
+
+%install
+make -C repos install-dom0 DESTDIR=$RPM_BUILD_ROOT
+
+%files -n qubes-repo-contrib
+%config(noreplace) /etc/yum.repos.d/qubes-contrib-dom0-r4.0.repo
+/etc/pki/rpm-gpg/RPM-GPG-KEY-qubes-4.0-contrib
+/etc/pki/rpm-gpg/RPM-GPG-KEY-qubes-4-contrib
+
+%changelog
+@CHANGELOG@

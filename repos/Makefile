@@ -7,6 +7,10 @@ install-vm-debian:
 		$(DESTDIR)/etc/apt/trusted.gpg.d/qubes-4-contrib-keyring.gpg \
 		qubesos-contrib-release-4-debian.asc
 
+install-dom0: install-fedora
+	install -d $(DESTDIR)/etc/yum.repos.d
+	install -m 0644 qubes-contrib-dom0-r4.0.repo $(DESTDIR)/etc/yum.repos.d
+
 install-vm-fedora: install-fedora
 	install -d $(DESTDIR)/etc/yum.repos.d
 	install -m 0644 qubes-contrib-vm-r4.0.repo-fedora $(DESTDIR)/etc/yum.repos.d/qubes-contrib-vm-r4.0.repo

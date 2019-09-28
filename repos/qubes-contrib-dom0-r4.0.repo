@@ -1,0 +1,13 @@
+[qubes-contrib-dom0-r4.0-current]
+name = Qubes OS Contrib Repository for dom0 (updates)
+baseurl = https://contrib.qubes-os.org/yum/r4.0/current/dom0/fc25
+gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-qubes-4-contrib
+gpgcheck = 1
+enabled=1
+
+[qubes-contrib-dom0-r4.0-current-testing]
+name = Qubes OS Contrib Repository for dom0 (updates-testing)
+baseurl = https://contrib.qubes-os.org/yum/r4.0/current-testing/dom0/fc25
+gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-qubes-4-contrib
+gpgcheck = 1
+enabled=0
