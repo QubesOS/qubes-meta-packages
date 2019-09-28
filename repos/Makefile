@@ -4,16 +4,30 @@ install-vm-debian:
 		> $(DESTDIR)/etc/apt/sources.list.d/qubes-contrib-r4.0.list
 	install -d $(DESTDIR)/etc/apt/trusted.gpg.d
 	gpg --dearmor --output \
-		$(DESTDIR)/etc/apt/trusted.gpg.d/qubes-4-contrib-keyring.gpg \
-		qubes-contrib-debian-4.asc
+		$(DESTDIR)/etc/apt/trusted.gpg.d/qubes-4-contrib-debian-keyring.gpg \
+		qubesos-contrib-release-4-debian.asc
+
+install-dom0: install-fedora
+	install -d $(DESTDIR)/etc/yum.repos.d
+	install -m 0644 qubes-contrib-dom0-r4.0.repo $(DESTDIR)/etc/yum.repos.d
 
 install-vm-fedora: install-fedora
 	install -d $(DESTDIR)/etc/yum.repos.d
-	install -m 0644 qubes-contrib-vm-r4.0.repo $(DESTDIR)/etc/yum.repos.d
+	install -m 0644 qubes-contrib-vm-r4.0.repo-fedora $(DESTDIR)/etc/yum.repos.d/qubes-contrib-vm-r4.0.repo
+
+install-vm-centos: install-centos
+	install -d $(DESTDIR)/etc/yum.repos.d
+	install -m 0644 qubes-contrib-vm-r4.0.repo-centos $(DESTDIR)/etc/yum.repos.d/qubes-contrib-vm-r4.0.repo
 
 install-fedora:
 	install -d $(DESTDIR)/etc/pki/rpm-gpg/
-	install -m 0644 qubes-contrib-fedora-4.asc \
-		$(DESTDIR)/etc/pki/rpm-gpg/RPM-GPG-KEY-qubes-4-contrib
-	ln -s RPM-GPG-KEY-qubes-4-contrib \
-		$(DESTDIR)/etc/pki/rpm-gpg/RPM-GPG-KEY-qubes-4.0-contrib
+	install -m 0644 qubesos-contrib-release-4-fedora.asc \
+		$(DESTDIR)/etc/pki/rpm-gpg/RPM-GPG-KEY-qubes-4-contrib-fedora
+	ln -s RPM-GPG-KEY-qubes-4-contrib-fedora \
+		$(DESTDIR)/etc/pki/rpm-gpg/RPM-GPG-KEY-qubes-4.0-contrib-fedora
+install-centos:
+	install -d $(DESTDIR)/etc/pki/rpm-gpg/
+	install -m 0644 qubesos-contrib-release-4-centos.asc \
+		$(DESTDIR)/etc/pki/rpm-gpg/RPM-GPG-KEY-qubes-4-contrib-centos
+	ln -s RPM-GPG-KEY-qubes-4-contrib-centos \
+		$(DESTDIR)/etc/pki/rpm-gpg/RPM-GPG-KEY-qubes-4.0-contrib-centos

@@ -1,3 +1,9 @@
+%if 0%{?rhel}
+%define local_dist_name centos
+%else
+%define local_dist_name fedora
+%endif
+
 Name:		qubes-vm-meta-packages
 Version:	@VERSION@
 Release:	1%{?dist}
@@ -58,12 +64,12 @@ not available in upstream repositories.
 %build
 
 %install
-make -C repos install-vm-fedora DESTDIR=$RPM_BUILD_ROOT
+make -C repos install-vm-%{local_dist_name} DESTDIR=$RPM_BUILD_ROOT
 
 %files -n qubes-repo-contrib
 %config(noreplace) /etc/yum.repos.d/qubes-contrib-vm-r4.0.repo
-/etc/pki/rpm-gpg/RPM-GPG-KEY-qubes-4.0-contrib
-/etc/pki/rpm-gpg/RPM-GPG-KEY-qubes-4-contrib
+/etc/pki/rpm-gpg/RPM-GPG-KEY-qubes-4.0-contrib-%{local_dist_name}
+/etc/pki/rpm-gpg/RPM-GPG-KEY-qubes-4-contrib-%{local_dist_name}
 
 %files -n qubes-vm-dependencies
 
