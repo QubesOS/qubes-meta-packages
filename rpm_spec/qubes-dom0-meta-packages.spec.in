@@ -30,8 +30,8 @@ make -C repos install-dom0 DESTDIR=$RPM_BUILD_ROOT
 
 %files -n qubes-repo-contrib
 %config(noreplace) /etc/yum.repos.d/qubes-contrib-dom0-r4.1.repo
-/etc/pki/rpm-gpg/RPM-GPG-KEY-qubes-4.1-contrib
-/etc/pki/rpm-gpg/RPM-GPG-KEY-qubes-4-contrib
+/etc/pki/rpm-gpg/RPM-GPG-KEY-qubes-4.1-contrib-fedora
+/etc/pki/rpm-gpg/RPM-GPG-KEY-qubes-4-contrib-fedora
 
 %changelog
 @CHANGELOG@
