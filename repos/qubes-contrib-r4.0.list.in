@@ -1,7 +1,7 @@
 # Qubes contrib repository
-deb [arch=amd64] http://deb.qubes-os.org/r4.0-contrib/vm @DIST@ main
-#deb-src http://deb.qubes-os.org/r4.0-contrib/vm @DIST@ main
+deb [arch=amd64] https://contrib.qubes-os.org/deb/r4.0/vm @DIST@ main
+#deb-src https://contrib.qubes-os.org/deb/r4.0/vm @DIST@ main
 
 # Qubes contrib updates testing repository
-#deb [arch=amd64] http://deb.qubes-os.org/r4.0-contrib/vm @DIST@-testing main
-#deb-src http://deb.qubes-os.org/r4.0-contrib/vm @DIST@-testing main
+#deb [arch=amd64] https://contrib.qubes-os.org/deb/r4.0/vm @DIST@-testing main
+#deb-src https://contrib.qubes-os.org/deb/r4.0/vm @DIST@-testing main
