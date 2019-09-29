@@ -1,3 +1,15 @@
+qubes-meta-packages (4.1.2-1) unstable; urgency=medium
+
+  [ Marek Marczykowski-Górecki ]
+  * travis: switch to xenial, update distributions, switch to R4.1
+  * travis: drop jessie and stretch
+
+  [ Frédéric Pierret (fepitre) ]
+  * Add QubesOS-contrib signing keys and update repo files
+  * Add dom0 meta-package spec file for contrib repo
+
+ -- Marek Marczykowski-Górecki <marmarek@invisiblethingslab.com>  Sun, 29 Sep 2019 21:14:04 +0200
+
 qubes-meta-packages (4.1.1-1) unstable; urgency=medium
 
   * Update contrib repositories to R4.1
