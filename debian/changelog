@@ -1,3 +1,15 @@
+qubes-meta-packages (4.0.6-1) unstable; urgency=medium
+
+  [ Marek Marczykowski-Górecki ]
+  * travis: switch to xenial, update distributions
+
+  [ Frédéric Pierret (fepitre) ]
+  * Add QubesOS-contrib signing keys and update repo files
+  * Add dom0 meta-package spec file for contrib repo
+  * Add dist suffix to keys
+
+ -- Marek Marczykowski-Górecki <marmarek@invisiblethingslab.com>  Sun, 29 Sep 2019 21:13:45 +0200
+
 qubes-meta-packages (4.0.5-1) unstable; urgency=medium
 
   * debian: add Build-Depends: gnupg
