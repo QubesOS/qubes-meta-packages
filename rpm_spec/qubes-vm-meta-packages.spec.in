@@ -58,6 +58,19 @@ Summary: Repository definition for packages contributed to Qubes OS
 Contrib repository contains packages written/adopted specifically for Qubes,
 not available in upstream repositories.
 
+%package -n qubes-vm-guivm
+Summary: Meta package with packages required in a GuiVM
+Requires: xorg-x11-Xephyr
+Requires: xorg-x11-utils
+Requires: xorg-x11-xkb-utils
+Requires: qubes-gui-daemon
+Requires: qubes-core-admin-client
+Requires: qubes-artwork
+Requires: qubes-menus
+
+%description -n qubes-vm-guivm
+This package depends on packages required to be installed in a GuiVM.
+
 %prep
 %setup -q
 
@@ -74,6 +87,8 @@ make -C repos install-vm-%{local_dist_name} DESTDIR=$RPM_BUILD_ROOT
 %files -n qubes-vm-dependencies
 
 %files -n qubes-vm-recommended
+
+%files -n qubes-vm-guivm
 
 %changelog
 @CHANGELOG@
