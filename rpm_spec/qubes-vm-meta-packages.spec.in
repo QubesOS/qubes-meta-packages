@@ -60,7 +60,8 @@ not available in upstream repositories.
 
 %package -n qubes-vm-guivm
 Summary: Meta package with packages required in a GuiVM
-Requires: xorg-x11-Xephyr
+Requires: xorg-x11-server-Xorg
+Requires: xorg-x11-server-Xephyr
 Requires: xorg-x11-utils
 Requires: xorg-x11-xkb-utils
 Requires: qubes-gui-daemon
