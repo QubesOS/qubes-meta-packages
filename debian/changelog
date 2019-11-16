@@ -1,3 +1,10 @@
+qubes-meta-packages (4.1.5-1) unstable; urgency=medium
+
+  [ Frédéric Pierret (fepitre) ]
+  * guivm: fix package name and ensure Xorg too
+
+ -- Marek Marczykowski-Górecki <marmarek@invisiblethingslab.com>  Sat, 16 Nov 2019 15:37:38 +0100
+
 qubes-meta-packages (4.1.4-1) unstable; urgency=medium
 
   [ Frédéric Pierret (fepitre) ]
