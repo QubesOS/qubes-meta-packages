@@ -1,3 +1,11 @@
+SHELL = /bin/bash
+
+ifneq (,$(wildcard /etc/fedora-release))
+DIST = fc$(shell rpm --eval %{fedora})
+endif
+
+DIST ?= fc31
+
 install-vm-debian:
 	install -d $(DESTDIR)/etc/apt/sources.list.d
 	sed -e "s/@DIST@/`lsb_release -cs`/" qubes-contrib-r4.1.list.in \
@@ -9,7 +17,8 @@ install-vm-debian:
 
 install-dom0: install-fedora
 	install -d $(DESTDIR)/etc/yum.repos.d
-	install -m 0644 qubes-contrib-dom0-r4.1.repo $(DESTDIR)/etc/yum.repos.d
+	install -m 0644 qubes-contrib-dom0-r4.1.repo.in $(DESTDIR)/etc/yum.repos.d/qubes-contrib-dom0-r4.1.repo
+	sed -i "s/@DIST@/$(DIST)/g" $(DESTDIR)/etc/yum.repos.d/qubes-contrib-dom0-r4.1.repo
 
 install-vm-fedora: install-fedora
 	install -d $(DESTDIR)/etc/yum.repos.d
