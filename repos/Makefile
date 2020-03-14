@@ -1,6 +1,16 @@
+SHELL = /bin/bash
+
+ifneq (,$(wildcard /etc/fedora-release))
+DIST = fc$(shell rpm --eval %{fedora})
+else ifneq (,$(wildcard /etc/os-release))
+DIST = $(shell grep VERSION_CODENAME= /etc/os-release | cut -d'=' -f2)
+endif
+
+DIST ?= fc31
+
 install-vm-debian:
 	install -d $(DESTDIR)/etc/apt/sources.list.d
-	sed -e "s/@DIST@/`lsb_release -cs`/" qubes-contrib-r4.0.list.in \
+	sed -e "s/@DIST@/$(DIST)/" qubes-contrib-r4.0.list.in \
 		> $(DESTDIR)/etc/apt/sources.list.d/qubes-contrib-r4.0.list
 	install -d $(DESTDIR)/etc/apt/trusted.gpg.d
 	gpg --dearmor --output \
