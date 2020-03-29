@@ -22,6 +22,7 @@ Requires:   qubes-core-agent
 Requires:   qubes-core-agent-systemd
 Requires:   qubes-gui-agent
 Requires:   xen-runtime
+Obsoletes:  xen-qubes-vm < 2001:4.9
 
 %description -n qubes-vm-dependencies
 This package depends on packages required to be installed in Qubes VM.
