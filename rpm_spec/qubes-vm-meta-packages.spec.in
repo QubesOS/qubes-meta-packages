@@ -38,7 +38,6 @@ Requires:   qubes-core-agent-networking
 Requires:   qubes-core-agent-passwordless-root
 Requires:   qubes-gpg-split
 Requires:   qubes-img-converter
-Requires:   python%{python3_pkgversion}-qubesimgconverter
 Requires:   qubes-input-proxy-sender
 Requires:   qubes-mgmt-salt-vm-connector
 Requires:   qubes-pdf-converter
