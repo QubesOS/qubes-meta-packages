@@ -28,7 +28,12 @@ This package depends on packages required to be installed in Qubes VM.
 
 %package -n qubes-vm-recommended
 Summary:    Meta package with packages recommended in Qubes VM
+%if 0%{?rhel} >= 7
+# CentOS lacks mate-notification-daemon
+Requires:   xfce4-notifyd
+%else
 Requires:   mate-notification-daemon
+%endif
 Requires:   pulseaudio-qubes
 Requires:   qubes-core-agent-dom0-updates
 Requires:   qubes-core-agent-nautilus
