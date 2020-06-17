@@ -31,17 +31,7 @@ Description: Meta package with packages required in Qubes VM
 Package: qubes-vm-recommended
 Architecture: any
 Depends:
-    cups,
-    gnome-terminal,
-    gnome-themes-standard,
-    haveged,
-    libnotify-bin,
-    locales,
-    locales-all,
-    mate-notification-daemon,
-    ncurses-term,
-    network-manager (>= 0.8.1-1),
-    network-manager-gnome,
+    xfce4-notifyd,
     pulseaudio-qubes,
     qubes-core-agent-dom0-updates,
     qubes-core-agent-nautilus,
@@ -58,3 +48,17 @@ Depends:
 Description: Meta package with packages recommended in Qubes VM
  Installing this package is recommended to have full functionality available in
  Qubes VM.
+
+Package: qubes-vm-guivm
+Architecture: any
+Depends:
+    xserver-xorg,
+    xserver-xephyr,
+    x11-utils,
+    x11-xkb-utils,
+    qubes-gui-daemon,
+    qubes-core-admin-client,
+    qubes-artwork,
+    qubes-menus
+Description: Meta package with packages required in a GuiVM
+ This package depends on packages required to be installed in a GuiVM.
