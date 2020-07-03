@@ -78,7 +78,15 @@ This package depends on packages required to be installed in a GuiVM.
 %build
 
 %install
+# comps
+install -d -m 755 $RPM_BUILD_ROOT/usr/share/qubes
+install -m 644 comps/comps-vm.xml $RPM_BUILD_ROOT/usr/share/qubes/qubes-comps.xml
+
+# contrib repo
 make -C repos install-vm-%{local_dist_name} DESTDIR=$RPM_BUILD_ROOT
+
+%files
+/usr/share/qubes/qubes-comps.xml
 
 %files -n qubes-repo-contrib
 %config(noreplace) /etc/yum.repos.d/qubes-contrib-vm-r4.1.repo
