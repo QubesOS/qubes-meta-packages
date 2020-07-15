@@ -1,3 +1,16 @@
+qubes-meta-packages (4.1.9-1) unstable; urgency=medium
+
+  [ Frédéric Pierret (fepitre) ]
+  * debian: sync with spec file and add guivm pkg
+  * Add comps-dom0.xml and comps-vm.xml
+  * Update travis
+
+  [ Marek Marczykowski-Górecki ]
+  * dom0: include qubes-dom0-meta-packages in comps file for dom0
+  * rpm: Add C: qubes-release < 4.1-0.26
+
+ -- Marek Marczykowski-Górecki <marmarek@invisiblethingslab.com>  Wed, 15 Jul 2020 18:25:30 +0200
+
 qubes-meta-packages (4.1.8-1) unstable; urgency=medium
 
   * rpm: do not depend on python*-imgconverter directly
