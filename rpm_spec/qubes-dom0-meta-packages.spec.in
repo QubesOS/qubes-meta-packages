@@ -8,6 +8,7 @@ Group:		System Environment/Base
 License:	GPLv2+
 URL:		https://www.qubes-os.org/
 
+Conflicts:  qubes-release < 4.1-0.26
 Source0: %{name}-%{version}.tar.gz
 
 %description
