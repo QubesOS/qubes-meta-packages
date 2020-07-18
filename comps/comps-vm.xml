@@ -279,6 +279,7 @@
       <packagereq>xfce4-power-manager</packagereq>
       <packagereq>xfce4-session</packagereq>
       <packagereq>xfce4-settings</packagereq>
+      <packagereq>xfce4-settings-qubes</packagereq>
       <packagereq>xfconf</packagereq>
       <packagereq>xfdesktop</packagereq>
       <packagereq>xfwm4</packagereq>
