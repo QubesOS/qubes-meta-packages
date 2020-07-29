@@ -252,7 +252,6 @@
       <packagereq>bluebird-gtk2-theme</packagereq>
       <packagereq>bluebird-gtk3-theme</packagereq>
       <packagereq>bluebird-xfwm4-theme</packagereq>
-      <packagereq>dnfdragora-updater</packagereq>
       <packagereq>greybird-light-theme</packagereq>
       <packagereq>greybird-dark-theme</packagereq>
       <packagereq>greybird-xfce4-notifyd-theme</packagereq>
