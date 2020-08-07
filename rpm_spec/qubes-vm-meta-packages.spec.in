@@ -40,9 +40,13 @@ Requires:   qubes-gpg-split
 Requires:   qubes-img-converter
 Requires:   qubes-input-proxy-sender
 Requires:   qubes-mgmt-salt-vm-connector
-Requires:   qubes-pdf-converter
 Requires:   qubes-usb-proxy
 Requires:   thunderbird-qubes
+# qubes-pdf-converter needs python3.7+ currently
+# not fully available
+%if 0%{?rhel} != 7
+Requires:   qubes-pdf-converter
+%endif
 
 %description -n qubes-vm-recommended
 Installing this package is recommended to have full functionality available in
