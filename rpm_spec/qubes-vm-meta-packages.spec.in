@@ -68,6 +68,7 @@ Requires: qubes-gui-daemon
 Requires: qubes-core-admin-client
 Requires: qubes-artwork
 Requires: qubes-menus
+Requires: qubes-input-proxy-receiver
 
 %description -n qubes-vm-guivm
 This package depends on packages required to be installed in a GuiVM.
