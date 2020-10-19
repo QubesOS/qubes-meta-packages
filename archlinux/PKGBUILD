@@ -1,0 +1,41 @@
+# Frédéric Pierret <frederic.pierret@qubes-os.org>
+
+pkgname=(qubes-vm-dependencies qubes-vm-recommended)
+pkgver=$(cat version)
+pkgrel=1
+
+epoch=
+pkgdesc="Meta packages for Qubes-specific components"
+arch=("x86_64")
+url="http://qubes-os.org/"
+license=('GPL')
+groups=()
+depends=()
+makedepends=()
+checkdepends=()
+optdepends=()
+provides=()
+conflicts=()
+replaces=('')
+backup=()
+options=()
+install=
+changelog=
+
+source=()
+
+noextract=()
+md5sums=() #generate with 'makepkg -g'
+
+
+package_qubes-vm-dependencies() {
+    depends=(qubes-vm-xen qubes-vm-core qubes-vm-qrexec qubes-vm-gui qubes-vm-pulseaudio)
+}
+
+package_qubes-vm-recommended() {
+    depends=(qubes-gpg-split qubes-usb-proxy)
+}
+
+
+# vim:set ts=2 sw=2 et:
+
