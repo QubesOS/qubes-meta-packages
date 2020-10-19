@@ -33,7 +33,7 @@ package_qubes-vm-dependencies() {
 }
 
 package_qubes-vm-recommended() {
-    depends=(qubes-gpg-split qubes-usb-proxy)
+    depends=(qubes-vm-passwordless-root qubes-vm-networking qubes-gpg-split qubes-usb-proxy)
 }
 
 
