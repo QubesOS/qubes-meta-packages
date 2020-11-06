@@ -1,4 +1,56 @@
+config_prependtomark() {
+    FILE=$1
+    APPENDBEFORELINE=$2
+    APPENDLINE=$3
+    grep -F -q "$APPENDLINE" "$FILE" || sed "/$APPENDBEFORELINE/i$APPENDLINE" -i "$FILE"
+}
+
+config_appendtomark() {
+    FILE=$1
+    APPENDAFTERLINE=$2
+    APPENDLINE=$3
+    grep -F -q "$APPENDLINE" "$FILE" || sed "/$APPENDAFTERLINE/a$APPENDLINE" -i "$FILE"
+}
+
+config_cleanupmark() {
+    FILE="$1"
+    BEGINMARK="$2"
+    ENDMARK="$3"
+    if grep -F -q "$BEGINMARK" "$FILE"; then
+        if grep -F -q "$ENDMARK" "$FILE"; then
+            cp "$FILE" "$FILE.qubes-update-orig"
+            sed -i -e "/^$BEGINMARK$/,/^$ENDMARK$/{
+                /^$ENDMARK$/b
+                /^$BEGINMARK$/!d
+                }" "$FILE"
+            rm -f "$FILE.qubes-update-orig"
+        else
+            echo "ERROR: found $BEGINMARK marker but not $ENDMARK in $FILE. Please cleanup this file manually."
+        fi
+    elif grep -F -q "$ENDMARK" "$FILE"; then
+        echo "ERROR: found $ENDMARK marker but not $BEGINMARK in $FILE. Please cleanup this file manually."
+    fi
+}
+
+adjust_pacman() {
+    # Archlinux specific: If marker exists, cleanup text between begin and end marker
+    QUBES_MARKER="### QUBES CONFIG MARKER ###"
+    if grep -F -q "$QUBES_MARKER" /etc/pacman.conf; then
+        config_prependtomark "/etc/pacman.conf" "# REPOSITORIES" "### QUBES CONFIG END MARKER ###"
+        config_cleanupmark "/etc/pacman.conf" "$QUBES_MARKER" "### QUBES CONFIG END MARKER ###"
+    # Else, add qubes config block marker
+    else
+        config_prependtomark "/etc/pacman.conf" "# REPOSITORIES" "$QUBES_MARKER"
+        config_prependtomark "/etc/pacman.conf" "# REPOSITORIES" "### QUBES CONFIG END MARKER ###"
+    fi
+
+    # Include /etc/pacman.d drop-in directory
+    config_appendtomark "/etc/pacman.conf" "$QUBES_MARKER" "Include = /etc/pacman.d/*.conf"
+}
+
 post_upgrade() {
+    adjust_pacman
+
     if usr/bin/pacman-key -l >/dev/null 2>&1; then
         usr/bin/pacman-key --populate qubesos-vm
     fi
