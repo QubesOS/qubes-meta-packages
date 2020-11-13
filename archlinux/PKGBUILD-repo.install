@@ -57,7 +57,7 @@ post_upgrade() {
     release=$(echo "$1" | cut -d '.' -f 1,2)
 
     if ! [ -h /etc/pacman.d/90-qubes-${release}-current.conf ] ; then
-        ln -s qubes-${release}-current.conf.disabled /etc/pacman.d/90-qubes-${release}-current.conf
+        ln -s /etc/pacman.d/90-qubes-${release}-current.conf.disabled /etc/pacman.d/90-qubes-${release}-current.conf
     fi
 
 }
