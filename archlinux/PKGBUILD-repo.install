@@ -51,15 +51,15 @@ adjust_pacman() {
 post_upgrade() {
     adjust_pacman
 
-    if usr/bin/pacman-key -l >/dev/null 2>&1; then
-        usr/bin/pacman-key --populate qubesos-vm
-    fi
     release=$(echo "$1" | cut -d '.' -f 1,2)
 
     if ! [ -h /etc/pacman.d/90-qubes-${release}-current.conf ] ; then
         ln -s /etc/pacman.d/90-qubes-${release}-current.conf.disabled /etc/pacman.d/90-qubes-${release}-current.conf
     fi
 
+    if usr/bin/pacman-key -l >/dev/null 2>&1; then
+        usr/bin/pacman-key --populate qubesos-vm
+    fi
 }
 
 post_install() {
