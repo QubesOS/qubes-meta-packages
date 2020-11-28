@@ -6,6 +6,14 @@ else ifneq (,$(wildcard /etc/os-release))
 DIST = $(shell grep VERSION_CODENAME= /etc/os-release | cut -d'=' -f2)
 endif
 
+ifeq (,$(DIST))
+# On debian if previous attempt failed
+# it means we are on sid
+ifneq (,$(wildcard /etc/debian_version))
+DIST = $(shell cut -d'/' -f1 /etc/debian_version)
+endif
+endif
+
 DIST ?= fc31
 
 install-vm-debian:
