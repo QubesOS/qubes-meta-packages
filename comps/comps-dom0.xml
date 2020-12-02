@@ -1286,7 +1286,6 @@
       <packagereq>albatross-xfwm4-theme</packagereq>
       <packagereq>alsa-utils</packagereq>
       <packagereq>arc-theme</packagereq>
-      <packagereq>blueberry</packagereq>
       <packagereq>bluebird-gtk2-theme</packagereq>
       <packagereq>bluebird-gtk3-theme</packagereq>
       <packagereq>bluebird-xfwm4-theme</packagereq>
@@ -1295,7 +1294,6 @@
       <packagereq>greybird-xfce4-notifyd-theme</packagereq>
       <packagereq>greybird-xfwm4-theme</packagereq>
       <packagereq>gtk-xfce-engine</packagereq>
-      <packagereq>gvfs</packagereq>
       <packagereq>initial-setup-gui</packagereq>
       <packagereq>openssh-askpass</packagereq>
       <packagereq>vim-enhanced</packagereq>
