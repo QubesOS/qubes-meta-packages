@@ -48,6 +48,24 @@ adjust_pacman() {
     config_appendtomark "/etc/pacman.conf" "$QUBES_MARKER" "Include = /etc/pacman.d/*.conf"
 }
 
+populate_keyring() {
+    keyid=$(head -n 1 usr/share/pacman/keyrings/qubesos-vm-trusted|cut -f 1 -d :)
+    if usr/bin/pacman-key -l "$keyid" >/dev/null 2>&1; then
+        # already done
+        return
+    fi
+    if [ "$(df --output=fstype etc/pacman.d/gnupg/private-keys-v1.d|tail -n 1)" = "ramfs" ]; then
+        # if pacman's keyring is volatile, generate new one (note: private key
+        # won't survive anyway)
+        usr/bin/pacman-key --init
+        usr/bin/pacman-key --populate
+    else
+        # otherwise, import just new keys
+        usr/bin/pacman-key --populate qubesos-vm
+    fi
+}
+
+
 post_upgrade() {
     adjust_pacman
 
@@ -58,7 +76,7 @@ post_upgrade() {
     fi
 
     if usr/bin/pacman-key -l >/dev/null 2>&1; then
-        usr/bin/pacman-key --populate qubesos-vm
+        populate_keyring
     fi
 }
 
