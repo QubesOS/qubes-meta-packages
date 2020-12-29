@@ -1,3 +1,40 @@
+qubes-meta-packages (4.1.11-1) unstable; urgency=medium
+
+  [ Frédéric Pierret (fepitre) ]
+  * comps: drop dnfdragora-updater
+
+  [ Marek Marczykowski-Górecki ]
+  * Include qubes-manager in dom0 package set
+
+  [ Frédéric Pierret (fepitre) ]
+  * Ensure sender in dom0 and receiver in guivm
+  * spec: python3.7+ is not available in CentOS7
+  * Add archlinux packaging
+  * archlinux: add passwordless-root package in recommended
+
+  [ Marek Marczykowski-Górecki ]
+  * Add archlinux repo config
+  * archlinux: add pacman.d/*.conf include
+
+  [ Olivier MEDOC ]
+  * archlinux: fix retrieving source files properly in PKGBUILD
+
+  [ Frédéric Pierret (fepitre) ]
+  * Add .gitlab-ci.yml
+
+  [ Marek Marczykowski-Górecki ]
+  * gitlab-ci: enable archlinux build
+  * archlinux: move pacman-key after enabling repository
+
+  [ Frédéric Pierret (fepitre) ]
+  * repo: on debian use /etc/debian_version
+
+  [ Marek Marczykowski-Górecki ]
+  * comps: Remove unused packages from dom0
+  * Generate new local master key before importing qubesos keyring
+
+ -- Marek Marczykowski-Górecki <marmarek@invisiblethingslab.com>  Tue, 29 Dec 2020 21:38:45 +0100
+
 qubes-meta-packages (4.1.10-1) unstable; urgency=medium
 
   [ Frédéric Pierret (fepitre) ]
