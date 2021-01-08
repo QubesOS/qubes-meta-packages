@@ -35,7 +35,7 @@ build() {
 }
 
 package_qubes-vm-dependencies() {
-    depends=(qubes-vm-xen qubes-vm-core qubes-vm-qrexec qubes-vm-gui qubes-vm-pulseaudio)
+    depends=(qubes-vm-xen qubes-vm-core qubes-vm-gui qubes-vm-pulseaudio)
 }
 
 package_qubes-vm-recommended() {
