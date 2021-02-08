@@ -1432,12 +1432,12 @@
   </group>
   <group>
     <id>fedora</id>
-    <name>Fedora 32 template</name>
-    <description>Fedora 32 template</description>
+    <name>Fedora 33 template</name>
+    <description>Fedora 33 template</description>
     <default>false</default>
     <uservisible>false</uservisible>
     <packagelist>
-      <packagereq>qubes-template-fedora-32</packagereq>
+      <packagereq>qubes-template-fedora-33</packagereq>
     </packagelist>
   </group>
   <group>
