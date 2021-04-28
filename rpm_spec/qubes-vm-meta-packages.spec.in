@@ -21,7 +21,11 @@ Summary:    Meta package with packages required in Qubes VM
 Requires:   qubes-core-agent
 Requires:   qubes-core-agent-systemd
 Requires:   qubes-gui-agent
+%if 0%{?suse_version} > 0
+Requires:   xen-tools-domU
+%else
 Requires:   xen-runtime
+%endif
 Obsoletes:  xen-qubes-vm < 2001:4.9
 
 %description -n qubes-vm-dependencies
@@ -36,6 +40,7 @@ Requires:   qubes-core-agent-nautilus
 Requires:   qubes-core-agent-network-manager
 Requires:   qubes-core-agent-networking
 Requires:   qubes-core-agent-passwordless-root
+%if ! 0%{?suse_version} > 0
 Requires:   qubes-gpg-split
 Requires:   qubes-img-converter
 Requires:   qubes-input-proxy-sender
@@ -46,6 +51,7 @@ Requires:   thunderbird-qubes
 # not fully available
 %if 0%{?rhel} != 7
 Requires:   qubes-pdf-converter
+%endif
 %endif
 
 %description -n qubes-vm-recommended
