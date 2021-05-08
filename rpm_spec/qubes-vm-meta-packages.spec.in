@@ -14,6 +14,8 @@ Group:		System Environment/Base
 License:	GPLv2+
 URL:		https://www.qubes-os.org/
 
+BuildRequires: make
+
 Source0: %{name}-%{version}.tar.gz
 
 %package -n qubes-vm-dependencies
