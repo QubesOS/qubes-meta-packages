@@ -1,3 +1,14 @@
+qubes-meta-packages (4.1.12-1) unstable; urgency=medium
+
+  [ Marek Marczykowski-Górecki ]
+  * Switch default template to Fedora 33
+
+  [ Frédéric Pierret (fepitre) ]
+  * spec: add BR make
+  * Revert "gitlab-ci: enable archlinux build"
+
+ -- Marek Marczykowski-Górecki <marmarek@invisiblethingslab.com>  Tue, 18 May 2021 00:09:46 +0200
+
 qubes-meta-packages (4.1.11-1) unstable; urgency=medium
 
   [ Frédéric Pierret (fepitre) ]
