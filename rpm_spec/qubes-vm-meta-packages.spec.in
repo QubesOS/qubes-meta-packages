@@ -46,7 +46,7 @@ Requires:   qubes-usb-proxy
 Requires:   thunderbird-qubes
 # qubes-pdf-converter needs python3.7+ currently
 # not fully available
-%if 0%{?rhel} != 7
+%if ! (0%{?rhel} && 0%{?rhel} <= 8)
 Requires:   qubes-pdf-converter
 %endif
 
