@@ -1437,7 +1437,7 @@
     <default>false</default>
     <uservisible>false</uservisible>
     <packagelist>
-      <packagereq>qubes-template-fedora-33</packagereq>
+      <packagereq>qubes-template-fedora-34</packagereq>
     </packagelist>
   </group>
   <group>
