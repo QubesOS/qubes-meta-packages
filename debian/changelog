@@ -1,3 +1,9 @@
+qubes-meta-packages (4.1.15-1) unstable; urgency=medium
+
+  * Remove dependency on xorg-x11-utils and xorg-x11-xkb-utils
+
+ -- Marek Marczykowski-Górecki <marmarek@invisiblethingslab.com>  Sat, 10 Jul 2021 05:08:32 +0200
+
 qubes-meta-packages (4.1.14-1) unstable; urgency=medium
 
   [ Frédéric Pierret (fepitre) ]
