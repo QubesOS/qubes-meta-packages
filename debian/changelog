@@ -1,3 +1,13 @@
+qubes-meta-packages (4.1.14-1) unstable; urgency=medium
+
+  [ Frédéric Pierret (fepitre) ]
+  * spec: disable pdf-converter for CentOS
+
+  [ Marek Marczykowski-Górecki ]
+  * Include Fedora 34 template by default
+
+ -- Marek Marczykowski-Górecki <marmarek@invisiblethingslab.com>  Sat, 10 Jul 2021 04:08:24 +0200
+
 qubes-meta-packages (4.1.12-1) unstable; urgency=medium
 
   [ Marek Marczykowski-Górecki ]
