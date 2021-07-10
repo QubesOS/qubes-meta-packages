@@ -68,8 +68,7 @@ not available in upstream repositories.
 Summary: Meta package with packages required in a GuiVM
 Requires: xorg-x11-server-Xorg
 Requires: xorg-x11-server-Xephyr
-Requires: xorg-x11-utils
-Requires: xorg-x11-xkb-utils
+Requires: setxkbmap
 Requires: qubes-gui-daemon
 Requires: qubes-core-admin-client
 Requires: qubes-artwork
