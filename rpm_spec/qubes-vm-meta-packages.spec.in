@@ -48,7 +48,6 @@ Requires:   qubes-input-proxy-sender
 Requires:   qubes-mgmt-salt-vm-connector
 Requires:   qubes-pdf-converter
 Requires:   qubes-usb-proxy
-Requires:   thunderbird-qubes
 
 %description -n qubes-vm-recommended
 Installing this package is recommended to have full functionality available in
