@@ -57,6 +57,7 @@ Depends:
     x11-utils,
     x11-xkb-utils,
     qubes-gui-daemon,
+    qubes-gui-vnc,
     qubes-core-admin-client,
     qubes-artwork,
     qubes-menus
