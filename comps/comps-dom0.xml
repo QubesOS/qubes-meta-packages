@@ -1432,8 +1432,8 @@
   </group>
   <group>
     <id>fedora</id>
-    <name>Fedora 33 template</name>
-    <description>Fedora 33 template</description>
+    <name>Fedora 34 template</name>
+    <description>Fedora 34 template</description>
     <default>false</default>
     <uservisible>false</uservisible>
     <packagelist>
