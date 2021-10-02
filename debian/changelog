@@ -1,3 +1,10 @@
+qubes-meta-packages (4.1.19-1) unstable; urgency=medium
+
+  [ Demi Marie Obenour ]
+  * Don’t require qubes-thunderbird on Debian, either
+
+ -- Marek Marczykowski-Górecki <marmarek@invisiblethingslab.com>  Sat, 02 Oct 2021 04:22:31 +0200
+
 qubes-meta-packages (4.1.18-1) unstable; urgency=medium
 
   [ Frédéric Pierret (fepitre) ]
