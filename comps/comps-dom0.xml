@@ -1033,6 +1033,8 @@
       <packagereq type="optional">acpi</packagereq>
       <packagereq type="optional">acpitool</packagereq>
       <packagereq type="optional">alsa-firmware</packagereq>
+      <packagereq type="default">alsa-sof-firmware</packagereq>
+      <packagereq type="default">alsa-ucm</packagereq>
       <packagereq type="optional">cmospwd</packagereq>
       <packagereq type="optional">firmware-addon-dell</packagereq>
       <packagereq type="optional">hddtemp</packagereq>
