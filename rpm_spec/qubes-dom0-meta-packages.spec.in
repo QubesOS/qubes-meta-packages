@@ -11,6 +11,8 @@ URL:		https://www.qubes-os.org/
 Conflicts:  qubes-release < 4.1-0.26
 Source0: %{name}-%{version}.tar.gz
 
+BuildRequires: make
+
 %description
 Meta packages for easy maintenance of installed Qubes OS specific packages.
 
