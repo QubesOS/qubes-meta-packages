@@ -8,9 +8,9 @@ DEBIAN_BUILD_DIRS := $(DEBIAN_BUILD_DIRS.$(PACKAGE_SET))
 ARCH_BUILD_DIRS := $(ARCH_BUILD_DIRS.$(PACKAGE_SET))
 
 # remove Debian dependencies that will not work in Ubuntu focal
-if [[ $(DIST) == focal ]] ; then \
-    sed -i /qubes-core-agent-dom0-updates/d $(CHROOT_DIR)/$(DIST_SRC)/debian/control ;\
-    sed -i /qubes-mgmt-salt-vm-connector/d $(CHROOT_DIR)/$(DIST_SRC)/debian/control ;\
-fi
+ifeq ($(DIST),focal)
+  sed -i /qubes-core-agent-dom0-updates/d $(CHROOT_DIR)/$(DIST_SRC)/debian/control
+  sed -i /qubes-mgmt-salt-vm-connector/d $(CHROOT_DIR)/$(DIST_SRC)/debian/control
+endif
 
 # vim: filetype=make
