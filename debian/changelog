@@ -1,3 +1,22 @@
+qubes-meta-packages (4.1.20-1) unstable; urgency=medium
+
+  [ Ivan Kardykov ]
+  * Add SOF firmware suport
+
+  [ Frédéric Pierret (fepitre) ]
+  * spec: add BR make
+
+  [ Nick Davis ]
+  * removed qubes-core-agent-dom0-updates and qubes-mgmt-salt-vm-
+    connector from debian build deps.
+  * restore the deps in the debian/control file. instead use sed to
+    remove those entries only when building focal.
+  * fix the makefile syntax. Add the full path to the debian directory.
+  * add a proper make target.
+  * add SOURCE_COPY_IN when distro is ubuntu
+
+ -- Marek Marczykowski-Górecki <marmarek@invisiblethingslab.com>  Tue, 09 Nov 2021 06:44:22 +0100
+
 qubes-meta-packages (4.1.19-1) unstable; urgency=medium
 
   [ Demi Marie Obenour ]
