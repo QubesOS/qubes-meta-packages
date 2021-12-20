@@ -7,4 +7,20 @@ RPM_SPEC_FILES := $(RPM_SPEC_FILES.$(PACKAGE_SET))
 DEBIAN_BUILD_DIRS := $(DEBIAN_BUILD_DIRS.$(PACKAGE_SET))
 ARCH_BUILD_DIRS := $(ARCH_BUILD_DIRS.$(PACKAGE_SET))
 
+ifneq (,$(findstring $(DISTRIBUTION),qubuntu))
+  SOURCE_COPY_IN := source-debian-quilt-copy-in
+endif
+
+source-debian-quilt-copy-in:
+	if [[ $(DIST) == bionic ]] ; then \
+		sed -i /qubes-core-agent-dom0-updates/d $(CHROOT_DIR)/$(DIST_SRC)/debian/control ;\
+		sed -i /qubes-core-agent-nautilus/d $(CHROOT_DIR)/$(DIST_SRC)/debian/control ;\
+		sed -i /qubes-mgmt-salt-vm-connector/d $(CHROOT_DIR)/$(DIST_SRC)/debian/control ;\
+		sed -i /qubes-pdf-converter/d $(CHROOT_DIR)/$(DIST_SRC)/debian/control ;\
+	fi
+	if [[ $(DIST) == focal ]] ; then \
+		sed -i /qubes-core-agent-dom0-updates/d $(CHROOT_DIR)/$(DIST_SRC)/debian/control ;\
+		sed -i /qubes-mgmt-salt-vm-connector/d $(CHROOT_DIR)/$(DIST_SRC)/debian/control ;\
+	fi
+
 # vim: filetype=make
