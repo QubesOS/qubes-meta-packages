@@ -1443,8 +1443,8 @@
   </group>
   <group>
     <id>debian</id>
-    <name>Debian 11 (buster) template</name>
-    <description>Debian 11 (buster) template</description>
+    <name>Debian 11 (bullseye) template</name>
+    <description>Debian 11 (bullseye) template</description>
     <default>false</default>
     <uservisible>false</uservisible>
     <packagelist>
