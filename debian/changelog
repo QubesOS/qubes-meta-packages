@@ -1,3 +1,20 @@
+qubes-meta-packages (4.1.21-1) unstable; urgency=medium
+
+  [ 51lieal ]
+  * fix codename
+
+  [ Frédéric Pierret (fepitre) ]
+  * Drop Travis CI
+
+  [ Marek Marczykowski-Górecki ]
+  * Include Fedora 35 template
+
+  [ Frédéric Pierret (fepitre) ]
+  * contrib-dom0: ensure to import key after install
+  * Add Qubes Builder v2 integration
+
+ -- Marek Marczykowski-Górecki <marmarek@invisiblethingslab.com>  Wed, 04 May 2022 21:03:31 +0200
+
 qubes-meta-packages (4.1.20-1) unstable; urgency=medium
 
   [ Ivan Kardykov ]
