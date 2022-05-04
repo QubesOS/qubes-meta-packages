@@ -44,5 +44,8 @@ make -C repos install-dom0 DESTDIR=$RPM_BUILD_ROOT
 /etc/pki/rpm-gpg/RPM-GPG-KEY-qubes-4.1-contrib-fedora
 /etc/pki/rpm-gpg/RPM-GPG-KEY-qubes-4-contrib-fedora
 
+%posttrans -n qubes-repo-contrib
+systemd-run --on-active=5min rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-qubes-4-contrib-fedora
+
 %changelog
 @CHANGELOG@
