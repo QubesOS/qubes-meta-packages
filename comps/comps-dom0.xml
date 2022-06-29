@@ -1462,6 +1462,17 @@
       <packagereq>qubes-template-whonix-ws-16</packagereq>
     </packagelist>
   </group>
+    <group>
+    <id>i3</id>
+    <name>i3wm</name>
+    <description>i3 Windows manager</description>
+    <default>false</default>
+    <uservisible>false</uservisible>
+    <packagelist>
+      <packagereq>i3</packagereq>
+      <packagereq>i3-settings-qubes</packagereq>
+    </packagelist>
+  </group>
   <environment>
    <id>qubes-xfce</id>
    <display_order>3</display_order>
