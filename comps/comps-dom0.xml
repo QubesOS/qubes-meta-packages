@@ -1473,6 +1473,90 @@
       <packagereq>i3-settings-qubes</packagereq>
     </packagelist>
   </group>
+   <group>
+    <id>gnome</id>
+    <name>Qubes OS with GNOME</name>
+    <description>Standard installation with GNOME enviroment in Dom0.</description>
+    <default>false</default>
+    <uservisible>false</uservisible>
+    <packagelist>
+      <packagereq type="mandatory">dconf</packagereq>
+      <packagereq type="mandatory">gdm</packagereq>
+      <packagereq type="mandatory">gedit</packagereq>
+      <packagereq type="mandatory">gnome-boxes</packagereq>
+      <packagereq type="mandatory">gnome-control-center</packagereq>
+      <packagereq type="mandatory">gnome-initial-setup</packagereq>
+      <packagereq type="mandatory">gnome-session-wayland-session</packagereq>
+      <packagereq type="mandatory">gnome-session-xsession</packagereq>
+      <packagereq type="mandatory">gnome-settings-daemon</packagereq>
+      <packagereq type="mandatory">gnome-shell</packagereq>
+      <packagereq type="mandatory">gnome-software</packagereq>
+      <packagereq type="mandatory">gnome-terminal</packagereq>
+      <packagereq type="mandatory">nautilus</packagereq>
+      <packagereq type="mandatory">polkit</packagereq>
+      <packagereq type="mandatory">yelp</packagereq>
+      <packagereq type="default">adobe-source-code-pro-fonts</packagereq>
+      <packagereq type="default">at-spi2-atk</packagereq>
+      <packagereq type="default">at-spi2-core</packagereq>
+      <packagereq type="default">avahi</packagereq>
+      <packagereq type="default">baobab</packagereq>
+      <packagereq type="default">cheese</packagereq>
+      <packagereq type="default">chrome-gnome-shell</packagereq>
+      <packagereq type="default">eog</packagereq>
+      <packagereq type="default">evince</packagereq>
+      <packagereq type="default">evince-djvu</packagereq>
+      <packagereq type="default">evince-nautilus</packagereq>
+      <packagereq type="default">file-roller</packagereq>
+      <packagereq type="default">file-roller-nautilus</packagereq>
+      <packagereq type="default">fprintd-pam</packagereq>
+      <packagereq type="default">gnome-backgrounds</packagereq>
+      <packagereq type="default">gnome-bluetooth</packagereq>
+      <packagereq type="default">gnome-calculator</packagereq>
+      <packagereq type="default">gnome-calendar</packagereq>
+      <packagereq type="default">gnome-characters</packagereq>
+      <packagereq type="default">gnome-classic-session</packagereq>
+      <packagereq type="default">gnome-clocks</packagereq>
+      <packagereq type="default">gnome-color-manager</packagereq>
+      <packagereq type="default">gnome-contacts</packagereq>
+      <packagereq type="default">gnome-disk-utility</packagereq>
+      <packagereq type="default">gnome-font-viewer</packagereq>
+      <packagereq type="default">gnome-getting-started-docs</packagereq>
+      <packagereq type="default">gnome-logs</packagereq>
+      <packagereq type="default">gnome-maps</packagereq>
+      <packagereq type="default">gnome-photos</packagereq>
+      <packagereq type="default">gnome-remote-desktop</packagereq>
+      <packagereq type="default">gnome-screenshot</packagereq>
+      <packagereq type="default">gnome-system-monitor</packagereq>
+      <packagereq type="default">gnome-terminal-nautilus</packagereq>
+      <packagereq type="default">gnome-themes-extra</packagereq>
+      <packagereq type="default">gnome-user-docs</packagereq>
+      <packagereq type="default">gnome-user-share</packagereq>
+      <packagereq type="default">gnome-weather</packagereq>
+      <packagereq type="default">gvfs-afc</packagereq>
+      <packagereq type="default">gvfs-afp</packagereq>
+      <packagereq type="default">gvfs-archive</packagereq>
+      <packagereq type="default">gvfs-fuse</packagereq>
+      <packagereq type="default">gvfs-goa</packagereq>
+      <packagereq type="default">gvfs-gphoto2</packagereq>
+      <packagereq type="default">gvfs-mtp</packagereq>
+      <packagereq type="default">gvfs-smb</packagereq>
+      <packagereq type="default">libcanberra-gtk2</packagereq>
+      <packagereq type="default">libcanberra-gtk3</packagereq>
+      <packagereq type="default">libproxy-mozjs</packagereq>
+      <packagereq type="default">librsvg2</packagereq>
+      <packagereq type="default">libsane-hpaio</packagereq>
+      <packagereq type="default">mesa-dri-drivers</packagereq>
+      <packagereq type="default">mesa-libEGL</packagereq>
+      <packagereq type="default">mousetweaks</packagereq>
+      <packagereq type="default">nautilus-sendto</packagereq>
+      <packagereq type="default">orca</packagereq>
+      <packagereq type="default">PackageKit-command-not-found</packagereq>
+      <packagereq type="default">PackageKit-gtk3-module</packagereq>
+      <packagereq type="default">xdg-desktop-portal</packagereq>
+      <packagereq type="default">xdg-desktop-portal-gtk</packagereq>
+      <packagereq type="default">xdg-user-dirs-gtk</packagereq>
+    </packagelist>
+  </group>
   <environment>
    <id>qubes-xfce</id>
    <display_order>3</display_order>
@@ -1488,6 +1572,60 @@
      <groupid>xfce-desktop-qubes</groupid>
      <groupid>xfce-extra-plugins</groupid>
      <groupid>xfce-media</groupid>
+    </grouplist>
+    <optionlist>
+     <groupid default='true'>qubes-ui</groupid>
+    </optionlist>
+  </environment>
+  <environment>
+   <id>qubes-i3</id>
+   <display_order>4</display_order>
+   <name>Qubes OS with I3</name>
+   <description>Standard installation with I3 enviroment in Dom0.</description>
+    <grouplist>
+     <groupid>base</groupid>
+     <groupid>base-x</groupid>
+     <groupid>hardware-support</groupid>
+     <groupid>fonts</groupid>
+     <groupid>sound-basic</groupid>
+     <groupid>qubes</groupid>
+     <groupid>i3</groupid>
+    </grouplist>
+    <optionlist>
+     <groupid default='true'>qubes-ui</groupid>
+    </optionlist>
+  </environment>
+   <environment>
+   <id>qubes-gnome</id>
+   <display_order>5</display_order>
+   <name>Qubes OS with Gnome</name>
+   <description>Standard installation with Gnome enviroment in Dom0.</description>
+    <grouplist>
+     <groupid>base</groupid>
+     <groupid>base-x</groupid>
+     <groupid>hardware-support</groupid>
+     <groupid>fonts</groupid>
+     <groupid>sound-basic</groupid>
+     <groupid>qubes</groupid>
+     <groupid>gnome</groupid>
+    </grouplist>
+    <optionlist>
+     <groupid default='true'>qubes-ui</groupid>
+    </optionlist>
+  </environment>
+     <environment>
+   <id>qubes-kde</id>
+   <display_order>6</display_order>
+   <name>Qubes OS with KDE</name>
+   <description>Standard installation with KDE enviroment in Dom0.</description>
+    <grouplist>
+     <groupid>base</groupid>
+     <groupid>base-x</groupid>
+     <groupid>hardware-support</groupid>
+     <groupid>fonts</groupid>
+     <groupid>sound-basic</groupid>
+     <groupid>qubes</groupid>
+     <groupid>kde-desktop-qubes</groupid>
     </grouplist>
     <optionlist>
      <groupid default='true'>qubes-ui</groupid>
