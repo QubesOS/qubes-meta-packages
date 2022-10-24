@@ -32,10 +32,10 @@ This package depends on packages required to be installed in Qubes VM.
 %package -n qubes-vm-recommended
 Summary:    Meta package with packages recommended in Qubes VM
 Requires:   xfce4-notifyd
-Requires:   pulseaudio-qubes
+Requires:   (pulseaudio-qubes if pulseaudio)
 Requires:   qubes-core-agent-dom0-updates
-Requires:   qubes-core-agent-nautilus
-Requires:   qubes-core-agent-network-manager
+Requires:   (qubes-core-agent-nautilus if nautilus)
+Requires:   (qubes-core-agent-network-manager if NetworkManager)
 Requires:   qubes-core-agent-networking
 Requires:   qubes-core-agent-passwordless-root
 Requires:   qubes-gpg-split
