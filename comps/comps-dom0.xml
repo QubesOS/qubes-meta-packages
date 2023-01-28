@@ -1433,12 +1433,12 @@
   </group>
   <group>
     <id>fedora</id>
-    <name>Fedora 36 template</name>
-    <description>Fedora 36 template</description>
+    <name>Fedora 37 template</name>
+    <description>Fedora 37 template</description>
     <default>false</default>
     <uservisible>false</uservisible>
     <packagelist>
-      <packagereq>qubes-template-fedora-36</packagereq>
+      <packagereq>qubes-template-fedora-37</packagereq>
     </packagelist>
   </group>
   <group>
