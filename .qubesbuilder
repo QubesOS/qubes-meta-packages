@@ -12,3 +12,11 @@ vm:
   archlinux:
     build:
     - archlinux
+
+vm-bookworm:
+  deb:
+    build:
+    - debian
+    source:
+      commands:
+      - 'sed -i /qubes-mgmt-salt-vm-connector/d @SOURCE_DIR@/debian/control'
