@@ -1404,6 +1404,7 @@
       <packagereq type="mandatory">qubes-manager</packagereq>S
       <packagereq type="mandatory">qubes-mgmt-salt-dom0</packagereq>
       <packagereq type="mandatory">qubes-dom0-meta-packages</packagereq>
+      <packagereq type="mandatory">qubes-desktop-linux-menu</packagereq>
       <packagereq type="default">qubes-gpg-split-dom0</packagereq>
       <packagereq type="default">qubes-img-converter-dom0</packagereq>
       <packagereq type="default">qubes-input-proxy</packagereq>
@@ -1411,6 +1412,7 @@
       <packagereq type="default">qubes-pdf-converter-dom0</packagereq>
       <packagereq type="default">qubes-usb-proxy-dom0</packagereq>
       <packagereq type="default">libvirt-client</packagereq>
+      <packagereq type="default">qubes-dom0-unwanted-packages</packagereq>
       <!--
       We add 'kernel-latest' and 'kernel-latest-qubes-vm' only as
       optional because it is not included in stable official releases
