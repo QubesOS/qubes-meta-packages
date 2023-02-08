@@ -1,3 +1,21 @@
+qubes-meta-packages (4.2.0-1) unstable; urgency=medium
+
+  [ Marek Marczykowski-Górecki ]
+  * Update fedora template to 36
+  * Include Fedora 37 template on installation image
+
+  [ unman ]
+  * Remove Debian dependencies that will not work in bookworm
+
+  [ Marek Marczykowski-Górecki ]
+  * Exclude qubes-mgmt-salt-vm-connector on bookworm via builderv2 too
+  * Prevent installing tracker and its deps
+  * Install new menu by default
+  * rpm: Use conditional dependencies
+  * rpm: install qubes-core-agent-thunar if Thunar is installed
+
+ -- Marek Marczykowski-Górecki <marmarek@invisiblethingslab.com>  Wed, 08 Feb 2023 14:02:25 +0100
+
 qubes-meta-packages (4.1.21-1) unstable; urgency=medium
 
   [ 51lieal ]
