@@ -35,6 +35,7 @@ Requires:   xfce4-notifyd
 Requires:   (pulseaudio-qubes if pulseaudio)
 Requires:   qubes-core-agent-dom0-updates
 Requires:   (qubes-core-agent-nautilus if nautilus)
+Requires:   (qubes-core-agent-thunar if Thunar)
 Requires:   (qubes-core-agent-network-manager if NetworkManager)
 Requires:   qubes-core-agent-networking
 Requires:   qubes-core-agent-passwordless-root
