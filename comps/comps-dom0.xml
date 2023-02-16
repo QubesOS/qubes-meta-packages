@@ -468,6 +468,9 @@
     <uservisible>false</uservisible>
     <packagelist>
       <packagereq type="default">abattis-cantarell-fonts</packagereq>
+      <packagereq type="default">dejavu-sans-fonts</packagereq>
+      <packagereq type="default">dejavu-sans-mono-fonts</packagereq>
+      <packagereq type="default">dejavu-serif-fonts</packagereq>
       <packagereq type="default">google-noto-emoji-color-fonts</packagereq>
       <packagereq type="default">google-noto-naskh-arabic-fonts</packagereq>
       <packagereq type="default">google-noto-sans-arabic-fonts</packagereq>
