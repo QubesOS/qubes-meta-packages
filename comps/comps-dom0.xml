@@ -467,12 +467,6 @@
     <default>false</default>
     <uservisible>false</uservisible>
     <packagelist>
-    <id>fonts</id>
-    <_name>Fonts</_name>
-    <_description>Fonts packages for rendering text on the desktop.</_description>
-    <default>false</default>
-    <uservisible>false</uservisible>
-    <packagelist>
       <packagereq type="default">abattis-cantarell-fonts</packagereq>
       <packagereq type="default">google-noto-emoji-color-fonts</packagereq>
       <packagereq type="default">google-noto-naskh-arabic-fonts</packagereq>
