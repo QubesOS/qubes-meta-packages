@@ -1677,7 +1677,7 @@
       <packagereq type="mandatory">qubes-gui-dom0</packagereq>
       <packagereq type="mandatory">qubes-desktop-linux-common</packagereq>
       <packagereq type="mandatory">qubes-desktop-linux-manager</packagereq>
-      <packagereq type="mandatory">qubes-manager</packagereq>S
+      <packagereq type="mandatory">qubes-manager</packagereq>
       <packagereq type="mandatory">qubes-mgmt-salt-dom0</packagereq>
       <packagereq type="mandatory">qubes-dom0-meta-packages</packagereq>
       <packagereq type="mandatory">qubes-desktop-linux-menu</packagereq>
