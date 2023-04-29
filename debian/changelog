@@ -1,3 +1,14 @@
+qubes-meta-packages (4.1.22-1) unstable; urgency=medium
+
+  [ Marek Marczykowski-Górecki ]
+  * Update fedora template to 36
+  * Include Fedora 37 template on installation image
+
+  [ unman ]
+  * Remove Debian dependencies that will not work in bookworm
+
+ -- Marek Marczykowski-Górecki <marmarek@invisiblethingslab.com>  Sat, 29 Apr 2023 03:24:11 +0200
+
 qubes-meta-packages (4.1.21-1) unstable; urgency=medium
 
   [ 51lieal ]
