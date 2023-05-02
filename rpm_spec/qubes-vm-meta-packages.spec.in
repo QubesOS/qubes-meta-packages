@@ -96,8 +96,8 @@ make -C repos install-vm-%{local_dist_name} DESTDIR=$RPM_BUILD_ROOT
 /usr/share/qubes/qubes-comps.xml
 
 %files -n qubes-repo-contrib
-%config(noreplace) /etc/yum.repos.d/qubes-contrib-vm-r4.1.repo
-/etc/pki/rpm-gpg/RPM-GPG-KEY-qubes-4.1-contrib-%{local_dist_name}
+%config(noreplace) /etc/yum.repos.d/qubes-contrib-vm-r4.2.repo
+/etc/pki/rpm-gpg/RPM-GPG-KEY-qubes-4.2-contrib-%{local_dist_name}
 /etc/pki/rpm-gpg/RPM-GPG-KEY-qubes-4-contrib-%{local_dist_name}
 
 %files -n qubes-vm-dependencies

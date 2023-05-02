@@ -1,2 +1,2 @@
-etc/apt/sources.list.d/qubes-contrib-r4.1.list
+etc/apt/sources.list.d/qubes-contrib-r4.2.list
 etc/apt/trusted.gpg.d/qubes-4-contrib-debian-keyring.gpg
