@@ -1,3 +1,20 @@
+qubes-meta-packages (4.2.3-1) unstable; urgency=medium
+
+  [ Delemax Sandria ]
+  * Update comps-dom0.xml
+
+  [ Frédéric Pierret (fepitre) ]
+  * Rework Archlinux packaging
+  * archlinux: support for new packaging in legacy builder
+  * salt is not available for jammy
+  * Update ArchLinux repository key
+  * Update repos to 4.2
+
+  [ Marek Marczykowski-Górecki ]
+  * archlinux: update trusted/revoked fingerprints
+
+ -- Marek Marczykowski-Górecki <marmarek@invisiblethingslab.com>  Wed, 03 May 2023 03:57:48 +0200
+
 qubes-meta-packages (4.2.2-1) unstable; urgency=medium
 
   * Fix copy&paste error
