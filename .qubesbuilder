@@ -20,3 +20,11 @@ vm-bookworm:
     source:
       commands:
       - 'sed -i /qubes-mgmt-salt-vm-connector/d @SOURCE_DIR@/debian/control'
+
+vm-jammy:
+  deb:
+    build:
+    - debian
+    source:
+      commands:
+      - 'sed -i /qubes-mgmt-salt-vm-connector/d @SOURCE_DIR@/debian/control'
