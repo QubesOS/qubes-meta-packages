@@ -9,23 +9,28 @@ vm:
   deb:
     build:
     - debian
-  archlinux:
-    build:
-    - archlinux
-
-vm-bookworm:
-  deb:
-    build:
-    - debian
-    source:
-      commands:
-      - 'sed -i /qubes-mgmt-salt-vm-connector/d @SOURCE_DIR@/debian/control'
-
-vm-jammy:
-  deb:
-    build:
-    - debian
     source:
       commands:
       - 'sed -i /qubes-mgmt-salt-vm-connector/d @SOURCE_DIR@/debian/control'
       - 'sed -i "s/pulseaudio-qubes,/pipewire-qubes,/" @SOURCE_DIR@/debian/control'
+  archlinux:
+    build:
+    - archlinux
+  ubuntu:
+    deb:
+      build:
+      - debian
+      source:
+        commands:
+        - 'sed -i /qubes-mgmt-salt-vm-connector/d @SOURCE_DIR@/debian/control'
+        - 'sed -i "s/pulseaudio-qubes,/pipewire-qubes,/" @SOURCE_DIR@/debian/control'
+
+vm-focal:
+  deb:
+    build:
+    - debian
+
+vm-bullseye:
+  deb:
+    build:
+    - debian
