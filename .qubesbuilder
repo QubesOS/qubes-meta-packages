@@ -28,8 +28,12 @@ vm-focal:
   deb:
     build:
     - debian
+    source:
+      commands: []
 
 vm-bullseye:
   deb:
     build:
     - debian
+    source:
+      commands: []
