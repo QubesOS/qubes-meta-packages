@@ -1,3 +1,14 @@
+qubes-meta-packages (4.2.5-1) unstable; urgency=medium
+
+  [ Frédéric Pierret (fepitre) ]
+  * Step back for jammy on pipewire
+
+  [ Demi Marie Obenour ]
+  * Ensure that PulseAudio server always has Qubes support
+  * qubes-vm-recommended: Require a PulseAudio daemon
+
+ -- Marek Marczykowski-Górecki <marmarek@invisiblethingslab.com>  Tue, 16 May 2023 04:45:44 +0200
+
 qubes-meta-packages (4.2.4-1) unstable; urgency=medium
 
   [ Frédéric Pierret (fepitre) ]
