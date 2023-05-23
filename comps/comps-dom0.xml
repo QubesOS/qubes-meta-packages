@@ -1687,6 +1687,7 @@
       <packagereq type="default">qubes-input-proxy-sender</packagereq>
       <packagereq type="default">qubes-pdf-converter-dom0</packagereq>
       <packagereq type="default">qubes-usb-proxy-dom0</packagereq>
+      <packagereq type="default">fwupd-qubes-dom0</packagereq>
       <packagereq type="default">libvirt-client</packagereq>
       <packagereq type="default">qubes-dom0-unwanted-packages</packagereq>
       <!--
