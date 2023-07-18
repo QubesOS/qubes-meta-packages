@@ -45,6 +45,8 @@ Depends:
     qubes-pdf-converter,
     qubes-usb-proxy,
     fwupd-qubes-vm,
+    wireless-tools,
+    wpasupplicant,
 Description: Meta package with packages recommended in Qubes VM
  Installing this package is recommended to have full functionality available in
  Qubes VM.
