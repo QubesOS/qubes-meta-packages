@@ -1,3 +1,12 @@
+qubes-meta-packages (4.2.8-1) unstable; urgency=medium
+
+  * Switch to fedora-38 template in the ISO
+  * Restore salt on bookworm, fix logic re ubuntu focal
+  * Adjust builderv1 to use pipewire in Debian 12 too
+  * Update to Whonix 17 and use new template naming scheme
+
+ -- Marek Marczykowski-Górecki <marmarek@invisiblethingslab.com>  Fri, 21 Jul 2023 03:23:17 +0200
+
 qubes-meta-packages (4.2.7-1) unstable; urgency=medium
 
   * Install fwupd-qubes-vm by default
