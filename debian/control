@@ -32,7 +32,7 @@ Package: qubes-vm-recommended
 Architecture: any
 Depends:
     xfce4-notifyd,
-    pulseaudio-qubes,
+    ${pulse:Depends},
     qubes-core-agent-dom0-updates,
     qubes-core-agent-nautilus,
     qubes-core-agent-network-manager,
@@ -41,7 +41,7 @@ Depends:
     qubes-gpg-split,
     qubes-img-converter,
     qubes-input-proxy-sender,
-    qubes-mgmt-salt-vm-connector,
+    ${qubessalt:Depends},
     qubes-pdf-converter,
     qubes-usb-proxy,
     fwupd-qubes-vm,

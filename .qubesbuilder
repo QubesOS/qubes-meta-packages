@@ -9,30 +9,6 @@ vm:
   deb:
     build:
     - debian
-    source:
-      commands:
-      - 'sed -i "s/pulseaudio-qubes,/pipewire-qubes,/" @SOURCE_DIR@/debian/control'
   archlinux:
     build:
     - archlinux
-  ubuntu:
-    deb:
-      build:
-      - debian
-      source:
-        commands: []
-
-vm-focal:
-  deb:
-    build:
-    - debian
-    source:
-      commands:
-      - 'sed -i /qubes-mgmt-salt-vm-connector/d @SOURCE_DIR@/debian/control'
-
-vm-bullseye:
-  deb:
-    build:
-    - debian
-    source:
-      commands: []
