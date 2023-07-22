@@ -7,6 +7,8 @@
 include /usr/share/dpkg/default.mk
 export DESTDIR=$(shell pwd)/debian/tmp
 
+DIST := $(shell grep ^VERSION_CODENAME= /etc/os-release | cut -d = -f 2)
+
 %:
 	dh $@
 
@@ -14,3 +16,12 @@ override_dh_auto_build:
 
 override_dh_auto_install:
 	make -C repos install-vm-debian
+
+override_dh_gencontrol:
+	echo "dist: $(DIST)"
+	if [ "$(DIST)" != "focal" ]; then \
+		echo "qubessalt:Depends=qubes-mgmt-salt-vm-connector" \
+			>> debian/qubes-vm-recommended.substvars; \
+	fi
+	echo "pulse:Depends=pulseaudio-qubes" >> debian/qubes-vm-recommended.substvars
+	dh_gencontrol
