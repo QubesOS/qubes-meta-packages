@@ -1,3 +1,9 @@
+qubes-meta-packages (4.2.9-1) unstable; urgency=medium
+
+  * debian: use dynamic variables instead of patching control file
+
+ -- Marek Marczykowski-Górecki <marmarek@invisiblethingslab.com>  Sun, 23 Jul 2023 11:09:47 +0200
+
 qubes-meta-packages (4.2.8-1) unstable; urgency=medium
 
   * Switch to fedora-38 template in the ISO
