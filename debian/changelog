@@ -1,3 +1,12 @@
+qubes-meta-packages (4.1.23-1) unstable; urgency=medium
+
+  * rpm: Use conditional dependencies
+  * rpm: install qubes-core-agent-thunar if Thunar is installed
+  * Restore salt on bookworm and ubuntu
+  * ci: drop R4.2
+
+ -- Marek Marczykowski-Górecki <marmarek@invisiblethingslab.com>  Sun, 23 Jul 2023 13:57:36 +0200
+
 qubes-meta-packages (4.1.22-1) unstable; urgency=medium
 
   [ Marek Marczykowski-Górecki ]
