@@ -1,3 +1,10 @@
+qubes-meta-packages (4.1.24-1) unstable; urgency=medium
+
+  [ Demi Marie Obenour ]
+  * Arch: Trust R4.2 keys in R4.1
+
+ -- Marek Marczykowski-Górecki <marmarek@invisiblethingslab.com>  Thu, 27 Jul 2023 19:08:58 +0200
+
 qubes-meta-packages (4.1.23-1) unstable; urgency=medium
 
   * rpm: Use conditional dependencies
