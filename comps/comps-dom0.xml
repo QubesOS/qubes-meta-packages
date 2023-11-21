@@ -1595,6 +1595,8 @@
       <packagereq>xfconf</packagereq>
       <packagereq>xfdesktop</packagereq>
       <packagereq>xfwm4</packagereq>
+      <!-- qubes-developed app -->
+      <packagereq>disk-password-gui</packagereq>
     </packagelist>
   </group>
   <group>
