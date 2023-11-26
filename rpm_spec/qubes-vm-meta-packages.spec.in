@@ -31,7 +31,7 @@ This package depends on packages required to be installed in Qubes VM.
 
 %package -n qubes-vm-recommended
 Summary:    Meta package with packages recommended in Qubes VM
-Requires:   xfce4-notifyd
+Requires:   desktop-notification-daemon
 Requires:   pulseaudio-daemon
 Requires:   (pipewire-qubes if pipewire-pulseaudio)
 Requires:   (pulseaudio-qubes if pulseaudio)
@@ -52,6 +52,7 @@ Requires:   fwupd-qubes-vm
 %if ! (0%{?rhel} && 0%{?rhel} <= 8)
 Requires:   (qubes-pdf-converter if nautilus)
 %endif
+Recommends: xfce4-notifyd
 
 %description -n qubes-vm-recommended
 Installing this package is recommended to have full functionality available in
