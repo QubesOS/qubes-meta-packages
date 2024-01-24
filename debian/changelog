@@ -1,3 +1,12 @@
+qubes-meta-packages (4.2.10-1) unstable; urgency=medium
+
+  * Switch debian template to debian-12
+  * Use xfce flavors of Fedora and Debian templates
+  * Install disk-password-gui by default
+  * archlinux: prefer current-testing if enabled
+
+ -- Marek Marczykowski-Górecki <marmarek@invisiblethingslab.com>  Wed, 24 Jan 2024 05:27:18 +0100
+
 qubes-meta-packages (4.2.9-1) unstable; urgency=medium
 
   * debian: use dynamic variables instead of patching control file
