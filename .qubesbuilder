@@ -1,10 +1,10 @@
 host:
   rpm:
-    spec:
+    build:
     - rpm_spec/qubes-dom0-meta-packages.spec
 vm:
   rpm:
-    spec:
+    build:
     - rpm_spec/qubes-vm-meta-packages.spec
   deb:
     build:
