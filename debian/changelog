@@ -1,3 +1,16 @@
+qubes-meta-packages (4.2.11-1) unstable; urgency=medium
+
+  [ Marek Marczykowski-Górecki ]
+  * Update default Fedora template to 39
+
+  [ deeplow ]
+  * .qubesbuilder: replace 'spec' by 'build'
+
+  [ Marek Marczykowski-Górecki ]
+  * comps: install pipewire in dom0 by default
+
+ -- Marek Marczykowski-Górecki <marmarek@invisiblethingslab.com>  Sat, 06 Apr 2024 00:55:27 +0200
+
 qubes-meta-packages (4.2.10-1) unstable; urgency=medium
 
   * Switch debian template to debian-12
