@@ -1436,8 +1436,9 @@
     <uservisible>false</uservisible>
     <packagelist>
       <packagereq type="default">paman</packagereq>
-      <packagereq type="default">paprefs</packagereq>
       <packagereq type="default">pavucontrol</packagereq>
+      <packagereq type="default">pipewire</packagereq>
+      <packagereq type="default">pipewire-pulseaudio</packagereq>
     </packagelist>
   </group>
   <group>
