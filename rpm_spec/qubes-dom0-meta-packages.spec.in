@@ -37,15 +37,8 @@ Conflicts or dummy provides packages that are not wanted in dom0.
 %build
 
 %install
-# comps file
-install -d -m 755 $RPM_BUILD_ROOT/usr/share/qubes
-install -m 644 comps/comps-dom0.xml $RPM_BUILD_ROOT/usr/share/qubes/qubes-comps.xml
-
 # contrib repo
 make -C repos install-dom0 DESTDIR=$RPM_BUILD_ROOT
-
-%files
-/usr/share/qubes/qubes-comps.xml
 
 %files -n qubes-repo-contrib
 %config(noreplace) /etc/yum.repos.d/qubes-contrib-dom0-r4.2.repo
