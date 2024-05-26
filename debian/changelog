@@ -1,3 +1,12 @@
+qubes-meta-packages (4.3.0-1) unstable; urgency=medium
+
+  * archlinux: Add R4.3 signing key
+  * archlinux: switch repositories to R4.3 and remove R4.2 key
+  * ci: switch to R4.3
+  * archlinux: remove version number from repo config name
+
+ -- Marek Marczykowski-Górecki <marmarek@invisiblethingslab.com>  Sun, 26 May 2024 04:33:58 +0200
+
 qubes-meta-packages (4.2.14-1) unstable; urgency=medium
 
   * rpm: restore empty %files section
