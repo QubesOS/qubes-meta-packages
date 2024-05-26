@@ -69,10 +69,8 @@ populate_keyring() {
 post_upgrade() {
     adjust_pacman
 
-    release=$(echo "$1" | cut -d '.' -f 1,2)
-
-    if ! [ -h /etc/pacman.d/90-qubes-${release}-current.conf ] ; then
-        ln -s /etc/pacman.d/90-qubes-${release}-current.conf.disabled /etc/pacman.d/90-qubes-${release}-current.conf
+    if ! [ -h /etc/pacman.d/90-qubes-current.conf ] ; then
+        ln -s /etc/pacman.d/90-qubes-current.conf.disabled /etc/pacman.d/90-qubes-current.conf
     fi
 
     if usr/bin/pacman-key -l >/dev/null 2>&1; then
