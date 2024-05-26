@@ -25,8 +25,8 @@ package_qubes-vm-repo() {
 
     cd "${_pkgnvr}"
 
-    install -m 0644 -D repos/archlinux-qubes-repo-4.2-current.conf "${pkgdir}/etc/pacman.d/90-qubes-4.2-current.conf.disabled"
-    install -m 0644 -D repos/archlinux-qubes-repo-4.2-current-testing.conf "${pkgdir}/etc/pacman.d/85-qubes-4.2-current-testing.conf.disabled"
+    install -m 0644 -D repos/archlinux-qubes-repo-current.conf "${pkgdir}/etc/pacman.d/90-qubes-current.conf.disabled"
+    install -m 0644 -D repos/archlinux-qubes-repo-current-testing.conf "${pkgdir}/etc/pacman.d/85-qubes-current-testing.conf.disabled"
 
     # Install keyring (will be activated through the .install file)
     install -dm755 "${pkgdir}/usr/share/pacman/keyrings/"
