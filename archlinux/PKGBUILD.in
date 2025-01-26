@@ -16,7 +16,13 @@ package_qubes-vm-dependencies() {
 }
 
 package_qubes-vm-recommended() {
-    depends=(qubes-vm-passwordless-root qubes-vm-networking qubes-gpg-split qubes-usb-proxy)
+    depends=(
+        qubes-vm-passwordless-root
+        qubes-vm-networking
+        qubes-gpg-split
+        qubes-usb-proxy
+        qubes-pdf-converter
+    )
 }
 
 package_qubes-vm-repo() {
