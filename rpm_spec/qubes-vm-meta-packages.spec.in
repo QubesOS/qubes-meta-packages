@@ -50,7 +50,7 @@ Requires:   fwupd-qubes-vm
 # qubes-pdf-converter needs python3.7+ currently
 # not fully available
 %if ! (0%{?rhel} && 0%{?rhel} <= 8)
-Requires:   qubes-pdf-converter
+Requires:   (qubes-pdf-converter if nautilus)
 %endif
 
 %description -n qubes-vm-recommended

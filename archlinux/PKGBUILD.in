@@ -22,6 +22,8 @@ package_qubes-vm-recommended() {
         qubes-vm-networking
         qubes-gpg-split
         qubes-usb-proxy
+    )
+    optdepends=(
         qubes-pdf-converter
     )
 }
