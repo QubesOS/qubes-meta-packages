@@ -31,11 +31,7 @@ Description: Meta package with packages required in Qubes VM
 Package: qubes-vm-recommended
 Architecture: any
 Depends:
-    xfce4-notifyd,
-    ${pulse:Depends},
     qubes-core-agent-dom0-updates,
-    qubes-core-agent-nautilus,
-    qubes-core-agent-network-manager,
     qubes-core-agent-networking,
     qubes-core-agent-passwordless-root,
     qubes-gpg-split,
@@ -45,7 +41,11 @@ Depends:
     qubes-usb-proxy,
     fwupd-qubes-vm,
 Recommends:
-    qubes-pdf-converter
+    xfce4-notifyd,
+    ${pulse:Depends},
+    qubes-core-agent-nautilus,
+    qubes-core-agent-network-manager,
+    qubes-pdf-converter,
 Description: Meta package with packages recommended in Qubes VM
  Installing this package is recommended to have full functionality available in
  Qubes VM.
