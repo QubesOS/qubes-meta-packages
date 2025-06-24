@@ -12,7 +12,12 @@ source=("${_pkgnvr}.tar.gz")
 sha256sums=(SKIP)
 
 package_qubes-vm-dependencies() {
-    depends=(qubes-vm-xen qubes-vm-core qubes-vm-qrexec qubes-vm-gui)
+    depends=(
+      qubes-vm-core
+      qubes-vm-gui
+      qubes-vm-qrexec
+      qubes-vm-xen
+    )
 }
 
 package_qubes-vm-recommended() {
@@ -20,11 +25,11 @@ package_qubes-vm-recommended() {
         pipewire-qubes
     )
     depends=(
-        qubes-vm-passwordless-root
-        qubes-vm-networking
         qubes-gpg-split
-        qubes-usb-proxy
         qubes-pdf-converter
+        qubes-usb-proxy
+        qubes-vm-networking
+        qubes-vm-passwordless-root
     )
 }
 
