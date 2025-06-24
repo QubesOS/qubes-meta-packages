@@ -16,8 +16,10 @@ package_qubes-vm-dependencies() {
 }
 
 package_qubes-vm-recommended() {
-    depends=(
+    optdepends=(
         pipewire-qubes
+    )
+    depends=(
         qubes-vm-passwordless-root
         qubes-vm-networking
         qubes-gpg-split
