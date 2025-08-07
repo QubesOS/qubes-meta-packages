@@ -31,7 +31,7 @@ Description: Meta package with packages required in Qubes VM
 Package: qubes-vm-recommended
 Architecture: any
 Depends:
-    xfce4-notifyd,
+    ${notify:Depends},
     ${pulse:Depends},
     qubes-core-agent-dom0-updates,
     qubes-core-agent-nautilus,

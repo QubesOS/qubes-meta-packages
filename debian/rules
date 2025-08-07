@@ -28,4 +28,9 @@ override_dh_gencontrol:
 	else \
 		echo "pulse:Depends=pulseaudio-qubes" >> debian/qubes-vm-recommended.substvars; \
 	fi
+	if [ "$(DIST)" != "bookworm" ] && [ "$(DIST)" != "jammy" ] && [ "$(DIST)" != "noble" ]; then \
+		echo "notify:Depends=qubes-notification-agent" >> debian/qubes-vm-recommended.substvars; \
+	else \
+		echo "notify:Depends=xfce4-notifyd" >> debian/qubes-vm-recommended.substvars; \
+	fi
 	dh_gencontrol

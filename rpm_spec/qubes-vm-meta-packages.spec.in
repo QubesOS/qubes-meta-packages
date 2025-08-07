@@ -52,7 +52,7 @@ Requires:   fwupd-qubes-vm
 %if ! (0%{?rhel} && 0%{?rhel} <= 8)
 Requires:   qubes-pdf-converter
 %endif
-Recommends: xfce4-notifyd
+Recommends: qubes-notification-agent
 
 %description -n qubes-vm-recommended
 Installing this package is recommended to have full functionality available in
@@ -79,6 +79,7 @@ Requires: qubes-artwork
 Requires: qubes-menus
 Requires: qubes-input-proxy-receiver
 Requires: qubes-gui-vnc
+Requires: qubes-notification-daemon
 
 %description -n qubes-vm-guivm
 This package depends on packages required to be installed in a GuiVM.
