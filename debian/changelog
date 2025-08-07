@@ -1,3 +1,18 @@
+qubes-meta-packages (4.3.3-1) unstable; urgency=medium
+
+  [ Demi Marie Obenour ]
+  * Support arbitrary notification daemons
+
+  [ 3np ]
+  * arch: fix SPDX license
+  * arch(vm-recommended): make pipewire-qubes optional
+  * chore(arch): sort depenencies alphabetically
+
+  [ Marek Marczykowski-Górecki ]
+  * Replace xfce4-notifyd with qubes-notification-agent
+
+ -- Marek Marczykowski-Górecki <marmarek@invisiblethingslab.com>  Fri, 08 Aug 2025 01:31:41 +0200
+
 qubes-meta-packages (4.3.2-1) unstable; urgency=medium
 
   [ 3np ]
