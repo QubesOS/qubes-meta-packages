@@ -49,6 +49,11 @@ make -C repos install-dom0 DESTDIR=$RPM_BUILD_ROOT
 
 %files -n qubes-dom0-unwanted-packages
 
+%postun -n qubes-repo-contrib
+if [ $1 -eq 0 ] ; then
+    systemd-run --on-active=5min rpm -e gpg-pubkey-d0941e87-5d8c9210
+fi
+
 %posttrans -n qubes-repo-contrib
 systemd-run --on-active=5min rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-qubes-4-contrib-fedora
 
