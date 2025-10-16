@@ -51,11 +51,14 @@ make -C repos install-dom0 DESTDIR=$RPM_BUILD_ROOT
 
 %postun -n qubes-repo-contrib
 if [ $1 -eq 0 ] ; then
-    systemd-run --on-active=5s timeout 15m bash -c "while ! rpm -e gpg-pubkey-d0941e87-5d8c9210; do sleep 5; done"
+    systemd-run --timer-property=AccuracySec=1s --on-active=5s timeout 15m \
+     bash -c "while ! rpm -e gpg-pubkey-d0941e87-5d8c9210; do sleep 5; done"
 fi
 
 %posttrans -n qubes-repo-contrib
-systemd-run --on-active=5s timeout 15m bash -c "while ! rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-qubes-4-contrib-fedora; do sleep 5; done"
+systemd-run --timer-property=AccuracySec=1s --on-active=5s timeout 15m bash -c \
+ "while ! rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-qubes-4-contrib-fedora; do \
+  sleep 5; done"
 
 %changelog
 @CHANGELOG@
