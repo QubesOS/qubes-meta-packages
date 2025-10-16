@@ -1,3 +1,12 @@
+qubes-meta-packages (4.3.4-1) unstable; urgency=medium
+
+  [ deeplow ]
+  * Remove qubes-contrib key from RPM's DB
+  * Attempt key import/del every 5s until 15m timeout
+  * Increase systemd timer accuracy for postinst
+
+ -- Marek Marczykowski-Górecki <marmarek@invisiblethingslab.com>  Thu, 16 Oct 2025 23:45:29 +0200
+
 qubes-meta-packages (4.3.3-1) unstable; urgency=medium
 
   [ Demi Marie Obenour ]
