@@ -96,15 +96,25 @@ make -C repos install-vm-%{local_dist_name} DESTDIR=$RPM_BUILD_ROOT
 %files
 
 %files -n qubes-repo-contrib
-%config(noreplace) /etc/yum.repos.d/qubes-contrib-vm-r4.2.repo
-/etc/pki/rpm-gpg/RPM-GPG-KEY-qubes-4.2-contrib-%{local_dist_name}
-/etc/pki/rpm-gpg/RPM-GPG-KEY-qubes-4-contrib-%{local_dist_name}
+%config(noreplace) /etc/yum.repos.d/qubes-contrib-vm-r4.3.repo
+/etc/pki/rpm-gpg/RPM-GPG-KEY-qubes-4.3-contrib-%{local_dist_name}
 
 %files -n qubes-vm-dependencies
 
 %files -n qubes-vm-recommended
 
 %files -n qubes-vm-guivm
+
+%postun -n qubes-repo-contrib
+if [ $1 -eq 0 ] ; then
+    systemd-run --timer-property=AccuracySec=1s --on-active=5s timeout 15m \
+     bash -c "while ! rpm -e gpg-pubkey-be71fab7-693c1ee1; do sleep 5; done"
+fi
+
+%posttrans -n qubes-repo-contrib
+systemd-run --timer-property=AccuracySec=1s --on-active=5s timeout 15m bash -c \
+ "while ! rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-qubes-4.3-contrib-fedora; do \
+  sleep 5; done"
 
 %changelog
 @CHANGELOG@
