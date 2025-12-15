@@ -114,7 +114,9 @@ fi
 %posttrans -n qubes-repo-contrib
 systemd-run --timer-property=AccuracySec=1s --on-active=5s timeout 15m bash -c \
  "while ! rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-qubes-4.3-contrib-fedora; do \
-  sleep 5; done"
+  sleep 5; done; \
+  while rpm -q gpg-pubkey-d0941e87-5d8c9210 && \
+    ! rpm -e gpg-pubkey-d0941e87-5d8c9210; do sleep 5; done"
 
 %changelog
 @CHANGELOG@
