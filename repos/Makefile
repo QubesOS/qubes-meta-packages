@@ -20,9 +20,9 @@ install-vm-debian:
 	install -d $(DESTDIR)/etc/apt/sources.list.d
 	sed "s/@DIST@/$(DIST)/" qubes-contrib-r4.3.list.in \
 		> $(DESTDIR)/etc/apt/sources.list.d/qubes-contrib-r4.3.list
-	install -d $(DESTDIR)/etc/apt/trusted.gpg.d
+	install -d $(DESTDIR)/usr/share/keyrings
 	gpg --dearmor --output \
-		$(DESTDIR)/etc/apt/trusted.gpg.d/qubesos-contrib-release-4.3-debian.gpg \
+		$(DESTDIR)/usr/share/keyrings/qubesos-contrib-release-4.3-debian.gpg \
 		qubesos-contrib-release-4.3-debian.asc
 
 install-dom0:
