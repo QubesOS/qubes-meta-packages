@@ -1,3 +1,14 @@
+qubes-meta-packages (4.3.5-1) unstable; urgency=medium
+
+  [ Frédéric Pierret (fepitre) ]
+  * Add R4.3 contrib keys
+
+  [ Marek Marczykowski-Górecki ]
+  * Unload old keys on package update
+  * debian: use signed-by= in contrib repo
+
+ -- Marek Marczykowski-Górecki <marmarek@invisiblethingslab.com>  Mon, 15 Dec 2025 21:24:47 +0100
+
 qubes-meta-packages (4.3.4-1) unstable; urgency=medium
 
   [ deeplow ]
