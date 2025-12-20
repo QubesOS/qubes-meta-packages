@@ -15,6 +15,12 @@ Description: Repository definition for packages contributed to Qubes OS
  Contrib repository contains packages written/adopted specifically for Qubes,
  not available in upstream repositories.
 
+Package: qubes-repo-devel
+Architecture: any
+Description: Qubes devel packages repository
+ Packages built from the main branch directly, not official releases, no any
+ guarantee, no security support. Use at your own risk.
+
 Package: qubes-vm-dependencies
 Architecture: any
 Depends:

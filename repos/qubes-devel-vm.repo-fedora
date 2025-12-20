@@ -1,0 +1,9 @@
+[qubes-devel-vm-current-testing]
+name = Qubes VM Repository (devel testing)
+#baseurl = https://yum.qubes-os.org/devel/current-testing/vm/%DIST%
+metalink = https://yum.qubes-os.org/devel/current-testing/vm/%DIST%/repodata/repomd.xml.metalink
+skip_if_unavailable=False
+enabled = 1
+metadata_expire = 6h
+gpgcheck = 1
+gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-qubes-devel-fedora

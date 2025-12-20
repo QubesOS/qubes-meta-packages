@@ -1,0 +1,5 @@
+Types: deb deb-src
+URIs: https://deb.qubes-os.org/devel/vm
+Suites: @DIST@-testing
+Components: main
+Signed-By: /usr/share/keyrings/qubes-devel-debian.gpg

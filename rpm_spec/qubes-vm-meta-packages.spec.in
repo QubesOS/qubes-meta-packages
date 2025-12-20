@@ -68,6 +68,14 @@ Summary: Repository definition for packages contributed to Qubes OS
 Contrib repository contains packages written/adopted specifically for Qubes,
 not available in upstream repositories.
 
+%package -n qubes-repo-devel
+Summary:    Qubes devel packages repository
+
+%description -n qubes-repo-devel
+Qubes devel packages repository. Packages built from the main branch directly,
+not official releases, no any guarantee, no security support. Use at your
+own risk.
+
 %package -n qubes-vm-guivm
 Summary: Meta package with packages required in a GuiVM
 Requires: xorg-x11-server-Xorg
@@ -99,6 +107,10 @@ make -C repos install-vm-%{local_dist_name} DESTDIR=$RPM_BUILD_ROOT
 %config(noreplace) /etc/yum.repos.d/qubes-contrib-vm-r4.3.repo
 /etc/pki/rpm-gpg/RPM-GPG-KEY-qubes-4.3-contrib-%{local_dist_name}
 
+%files -n qubes-repo-devel
+%config(noreplace) /etc/yum.repos.d/qubes-devel-vm.repo
+/etc/pki/rpm-gpg/RPM-GPG-KEY-qubes-devel-fedora
+
 %files -n qubes-vm-dependencies
 
 %files -n qubes-vm-recommended
@@ -117,6 +129,12 @@ systemd-run --timer-property=AccuracySec=1s --on-active=5s timeout 15m bash -c \
   sleep 5; done; \
   while rpm -q gpg-pubkey-d0941e87-5d8c9210 && \
     ! rpm -e gpg-pubkey-d0941e87-5d8c9210; do sleep 5; done" || :
+
+%postun -n qubes-repo-devel
+if [ $1 -eq 0 ] ; then
+    systemd-run --timer-property=AccuracySec=1s --on-active=5s timeout 15m \
+     bash -c "while ! rpm -e gpg-pubkey-9b49524f-6942a652; do sleep 5; done" || :
+fi
 
 %changelog
 @CHANGELOG@
