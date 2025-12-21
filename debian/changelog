@@ -1,3 +1,9 @@
+qubes-meta-packages (4.3.7-1) unstable; urgency=medium
+
+  * Fix repo url in qubes-repo-devel for fedora template
+
+ -- Marek Marczykowski-Górecki <marmarek@invisiblethingslab.com>  Sun, 21 Dec 2025 10:55:16 +0100
+
 qubes-meta-packages (4.3.6-1) unstable; urgency=medium
 
   * rpm: don't fail transaction if systemd is not there
