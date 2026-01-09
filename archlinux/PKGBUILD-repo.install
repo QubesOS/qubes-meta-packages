@@ -69,6 +69,17 @@ populate_keyring() {
 post_upgrade() {
     adjust_pacman
 
+    # migrate symlinks from versioned name
+    if [ -h /etc/pacman.d/90-qubes-4.2-current.conf ] && ! [ -e /etc/pacman.d/90-qubes-4.2-current.conf ]; then
+        rm -f /etc/pacman.d/90-qubes-4.2-current.conf
+        ln -sf /etc/pacman.d/90-qubes-current.conf.disabled /etc/pacman.d/90-qubes-current.conf
+    fi
+
+    if [ -h /etc/pacman.d/85-qubes-4.2-current-testing.conf ] && ! [ -e /etc/pacman.d/85-qubes-4.2-current-testing.conf ]; then
+        rm -f /etc/pacman.d/85-qubes-4.2-current-testing.conf
+        ln -sf /etc/pacman.d/85-qubes-current-testing.conf.disabled /etc/pacman.d/85-qubes-current-testing.conf
+    fi
+
     if ! [ -h /etc/pacman.d/90-qubes-current.conf ] ; then
         ln -s /etc/pacman.d/90-qubes-current.conf.disabled /etc/pacman.d/90-qubes-current.conf
     fi
