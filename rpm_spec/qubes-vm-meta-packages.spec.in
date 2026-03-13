@@ -41,6 +41,7 @@ Requires:   (qubes-core-agent-thunar if Thunar)
 Requires:   (qubes-core-agent-network-manager if NetworkManager)
 Requires:   qubes-core-agent-networking
 Requires:   qubes-core-agent-passwordless-root
+Requires:   qubes-core-admin-client
 Requires:   qubes-gpg-split
 Requires:   qubes-img-converter
 Requires:   qubes-input-proxy-sender
