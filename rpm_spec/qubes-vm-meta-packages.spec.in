@@ -61,6 +61,14 @@ Qubes VM.
 %description
 Meta packages for easy maintenance of installed Qubes OS specific packages.
 
+%package -n qubes-distro-keys
+Summary: Signing keys included with the Qubes OS project
+
+%description -n qubes-distro-keys
+Signing keys that have been verified by the Qubes OS developers, to make
+it easier for users to verify signatures on software packages. Currently
+includes the QMSK and the 3mdeb master key.
+
 %package -n qubes-repo-contrib
 Summary: Repository definition for packages contributed to Qubes OS
 
@@ -98,10 +106,14 @@ This package depends on packages required to be installed in a GuiVM.
 %build
 
 %install
-# contrib repo
-make -C repos install-vm-%{local_dist_name} DESTDIR=$RPM_BUILD_ROOT
+# contrib repo and keys
+make -C repos install-vm-%{local_dist_name} install-keys DESTDIR=$RPM_BUILD_ROOT
 
 %files
+
+%files -n qubes-distro-keys
+/usr/share/qubes/keys/3mdeb-master-key.asc
+/usr/share/qubes/keys/qubes-master-key.asc
 
 %files -n qubes-repo-contrib
 %config(noreplace) /etc/yum.repos.d/qubes-contrib-vm-r4.3.repo

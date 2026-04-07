@@ -15,6 +15,13 @@ Description: Repository definition for packages contributed to Qubes OS
  Contrib repository contains packages written/adopted specifically for Qubes,
  not available in upstream repositories.
 
+Package: qubes-distro-keys
+Architecture: any
+Description: Signing keys included with the Qubes OS project
+ Signing keys that have been verified by the Qubes OS developers, to make
+ it easier for users to verify signatures on software packages. Currently
+ includes the QMSK and the 3mdeb master key.
+
 Package: qubes-repo-devel
 Architecture: any
 Description: Qubes devel packages repository

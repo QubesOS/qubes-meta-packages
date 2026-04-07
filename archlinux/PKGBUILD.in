@@ -33,6 +33,10 @@ package_qubes-vm-recommended() {
     )
 }
 
+package_qubes-vm-keys() {
+    make -C repos install-keys "DESTDIR=${pkgdir}"
+}
+
 package_qubes-vm-repo() {
     replaces=('qubes-vm-keyring')
     install=archlinux/PKGBUILD-repo.install

@@ -17,7 +17,7 @@ endif
 DIST ?= fc31
 
 install-vm-debian:
-	install -d $(DESTDIR)/etc/apt/sources.list.d
+	install -d $(DESTDIR)/etc/apt/sources.list.d $(DESTDIR)/usr/share/qubes/keys
 	sed "s/@DIST@/$(DIST)/" qubes-contrib-r4.3.list.in \
 		> $(DESTDIR)/etc/apt/sources.list.d/qubes-contrib-r4.3.list
 	sed "s/@DIST@/$(DIST)/" qubes-devel.sources.in \
@@ -30,8 +30,11 @@ install-vm-debian:
 		$(DESTDIR)/usr/share/keyrings/qubes-devel-debian.gpg \
 		qubes-devel-debian.asc
 
+install-keys:
+	install -m 0644 qubes-master-key.asc 3mdeb-master-key.asc $(DESTDIR)/usr/share/qubes/keys
+
 install-dom0:
-	install -d $(DESTDIR)/etc/yum.repos.d
+	install -d $(DESTDIR)/etc/yum.repos.d $(DESTDIR)/usr/share/qubes/keys
 	install -m 0644 qubes-contrib-dom0-r4.3.repo.in $(DESTDIR)/etc/yum.repos.d/qubes-contrib-dom0-r4.3.repo
 	sed -i "s/@DIST@/$(DIST)/g" $(DESTDIR)/etc/yum.repos.d/qubes-contrib-dom0-r4.3.repo
 	sed "s/@DIST@/$(DIST)/g" qubes-devel-host.repo.in \
@@ -41,7 +44,7 @@ install-dom0:
 	install -m 0644 qubes-devel-host.asc $(DESTDIR)/etc/pki/rpm-gpg/RPM-GPG-KEY-qubes-devel-primary
 
 install-vm-fedora:
-	install -d $(DESTDIR)/etc/yum.repos.d
+	install -d $(DESTDIR)/etc/yum.repos.d $(DESTDIR)/usr/share/qubes/keys
 	install -m 0644 qubes-contrib-vm-r4.3.repo-fedora $(DESTDIR)/etc/yum.repos.d/qubes-contrib-vm-r4.3.repo
 	sed "s/@DIST@/$(DIST)/g" qubes-devel-vm.repo-fedora \
 		> $(DESTDIR)/etc/yum.repos.d/qubes-devel-vm.repo
