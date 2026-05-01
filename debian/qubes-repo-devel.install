@@ -1,2 +1,3 @@
 etc/apt/sources.list.d/qubes-devel.sources
+usr/share/keyrings/qubes-devel-debian.pgp
 usr/share/keyrings/qubes-devel-debian.gpg

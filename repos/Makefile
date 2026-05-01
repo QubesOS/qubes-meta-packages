@@ -27,8 +27,10 @@ install-vm-debian:
 		$(DESTDIR)/usr/share/keyrings/qubesos-contrib-release-4.3-debian.gpg \
 		qubesos-contrib-release-4.3-debian.asc
 	gpg --dearmor --output \
-		$(DESTDIR)/usr/share/keyrings/qubes-devel-debian.gpg \
+		$(DESTDIR)/usr/share/keyrings/qubes-devel-debian.pgp \
 		qubes-devel-debian.asc
+	ln -s qubes-devel-debian.pgp \
+		$(DESTDIR)/usr/share/keyrings/qubes-devel-debian.gpg
 
 install-dom0:
 	install -d $(DESTDIR)/etc/yum.repos.d
