@@ -1,3 +1,17 @@
+qubes-meta-packages (4.3.8-1) unstable; urgency=medium
+
+  [ Demi Marie Obenour ]
+  * Add new qubes-distro-keys package
+
+  [ Marek Marczykowski-Górecki ]
+  * Add qubes-repo-devel for Arch too
+  * archlinux: mark repo packages as 'any' arch
+  * debian: rename keyring from .gpg to .pgp
+  * debian: rename devel sources.in file to include distribution name
+  * Add qubes-repo-devel for ubuntu too
+
+ -- Marek Marczykowski-Górecki <marmarek@invisiblethingslab.com>  Thu, 07 May 2026 05:15:53 +0200
+
 qubes-meta-packages (4.3.7-1) unstable; urgency=medium
 
   * Fix repo url in qubes-repo-devel for fedora template
