@@ -1,10 +1,10 @@
 # Maintainer: Frédéric Pierret (fepitre) <frederic@invisiblethingslab.com>
 
-pkgname=(qubes-vm-dependencies qubes-vm-recommended qubes-vm-repo)
+pkgname=(qubes-vm-dependencies qubes-vm-recommended qubes-vm-repo qubes-repo-devel)
 pkgver=@VERSION@
 pkgrel=@REL@
 pkgdesc="Meta packages for Qubes-specific components"
-arch=("x86_64")
+arch=("any")
 url="http://qubes-os.org/"
 license=('GPL-2.0-or-later')
 _pkgnvr="${pkgname}-${pkgver}-${pkgrel}"
@@ -51,4 +51,19 @@ package_qubes-vm-repo() {
     install -m0644 repos/qubes-repo-archlinux-key.asc  "${pkgdir}/usr/share/pacman/keyrings/qubesos-vm.gpg"
     install -m0644 repos/qubes-repo-archlinux-trusted "${pkgdir}/usr/share/pacman/keyrings/qubesos-vm-trusted"
     install -m0644 repos/qubes-repo-archlinux-revoked "${pkgdir}/usr/share/pacman/keyrings/qubesos-vm-revoked"
+}
+
+package_qubes-repo-devel() {
+    install=archlinux/PKGBUILD-repo-devel.install
+
+    cd "${_pkgnvr}"
+
+    install -m 0644 -D repos/archlinux-qubes-repo-devel.conf "${pkgdir}/etc/pacman.d/81-qubes-devel.conf"
+
+    # Install keyring (will be activated through the .install file)
+    install -dm755 "${pkgdir}/usr/share/pacman/keyrings/"
+    install -m0644 repos/qubes-devel-archlinux.asc "${pkgdir}/usr/share/pacman/keyrings/qubesos-devel.gpg"
+    fpr=$(gpg --show-keys --with-colons repos/qubes-devel-archlinux.asc|grep ^fpr:|cut -d : -f 10)
+    echo "$fpr:4:" > "${pkgdir}/usr/share/pacman/keyrings/qubesos-devel-trusted"
+    touch "${pkgdir}/usr/share/pacman/keyrings/qubesos-devel-revoked"
 }
