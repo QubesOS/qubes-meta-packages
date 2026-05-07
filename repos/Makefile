@@ -33,6 +33,9 @@ install-vm-debian:
 		qubes-devel-debian.asc
 	ln -s qubes-devel-debian.pgp \
 		$(DESTDIR)/usr/share/keyrings/qubes-devel-debian.gpg
+	gpg --dearmor --output \
+		$(DESTDIR)/usr/share/keyrings/qubes-devel-ubuntu.pgp \
+		qubes-devel-ubuntu.asc
 
 install-dom0:
 	install -d $(DESTDIR)/etc/yum.repos.d
