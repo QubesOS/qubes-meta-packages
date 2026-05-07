@@ -4,6 +4,7 @@ ifneq (,$(wildcard /etc/fedora-release))
 DIST = fc$(shell rpm --eval %{fedora})
 else ifneq (,$(wildcard /etc/os-release))
 DIST = $(shell grep VERSION_CODENAME= /etc/os-release | cut -d'=' -f2)
+DIST_NAME = $(shell grep ^ID= /etc/os-release | cut -d'=' -f2)
 endif
 
 ifeq (,$(DIST))
@@ -11,6 +12,7 @@ ifeq (,$(DIST))
 # it means we are on sid
 ifneq (,$(wildcard /etc/debian_version))
 DIST = $(shell cut -d'/' -f1 /etc/debian_version)
+DIST_NAME = debian
 endif
 endif
 
@@ -20,15 +22,20 @@ install-vm-debian:
 	install -d $(DESTDIR)/etc/apt/sources.list.d $(DESTDIR)/usr/share/qubes/keys
 	sed "s/@DIST@/$(DIST)/" qubes-contrib-r4.3.list.in \
 		> $(DESTDIR)/etc/apt/sources.list.d/qubes-contrib-r4.3.list
-	sed "s/@DIST@/$(DIST)/" qubes-devel.sources.in \
+	sed "s/@DIST@/$(DIST)/" qubes-devel-$(DIST_NAME).sources.in \
 		> $(DESTDIR)/etc/apt/sources.list.d/qubes-devel.sources
 	install -d $(DESTDIR)/usr/share/keyrings
 	gpg --dearmor --output \
 		$(DESTDIR)/usr/share/keyrings/qubesos-contrib-release-4.3-debian.gpg \
 		qubesos-contrib-release-4.3-debian.asc
 	gpg --dearmor --output \
-		$(DESTDIR)/usr/share/keyrings/qubes-devel-debian.gpg \
+		$(DESTDIR)/usr/share/keyrings/qubes-devel-debian.pgp \
 		qubes-devel-debian.asc
+	ln -s qubes-devel-debian.pgp \
+		$(DESTDIR)/usr/share/keyrings/qubes-devel-debian.gpg
+	gpg --dearmor --output \
+		$(DESTDIR)/usr/share/keyrings/qubes-devel-ubuntu.pgp \
+		qubes-devel-ubuntu.asc
 
 install-keys:
 	install -m 0644 qubes-master-key.asc 3mdeb-master-key.asc $(DESTDIR)/usr/share/qubes/keys
