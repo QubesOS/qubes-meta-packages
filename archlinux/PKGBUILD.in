@@ -21,15 +21,13 @@ package_qubes-vm-dependencies() {
 }
 
 package_qubes-vm-recommended() {
-    optdepends=(
-        pipewire-qubes
-    )
     depends=(
         qubes-gpg-split
         qubes-pdf-converter
         qubes-usb-proxy
         qubes-vm-networking
         qubes-vm-passwordless-root
+        pipewire-qubes
     )
 }
 
