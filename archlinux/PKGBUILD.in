@@ -29,6 +29,9 @@ package_qubes-vm-recommended() {
         qubes-vm-passwordless-root
         pipewire-qubes
     )
+    optdepends=(
+        qubes-notification-agent
+    )
 }
 
 package_qubes-vm-keys() {
