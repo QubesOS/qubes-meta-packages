@@ -1,3 +1,11 @@
+qubes-meta-packages (4.3.9-1) unstable; urgency=medium
+
+  * archlinux: move pipewire-qubes out of optdepends
+  * archlinux: add qubes-notification-agent as optdepends
+  * devel repo: use $releasever in Fedora repo file for VM
+
+ -- Marek Marczykowski-Górecki <marmarek@invisiblethingslab.com>  Mon, 31 Aug 2026 03:47:21 +0200
+
 qubes-meta-packages (4.3.8-1) unstable; urgency=medium
 
   [ Demi Marie Obenour ]
