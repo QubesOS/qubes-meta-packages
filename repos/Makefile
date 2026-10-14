@@ -20,14 +20,14 @@ DIST ?= fc31
 
 install-vm-debian:
 	install -d $(DESTDIR)/etc/apt/sources.list.d $(DESTDIR)/usr/share/qubes/keys
-	sed "s/@DIST@/$(DIST)/" qubes-contrib-r4.3.list.in \
-		> $(DESTDIR)/etc/apt/sources.list.d/qubes-contrib-r4.3.list
+	sed "s/@DIST@/$(DIST)/" qubes-contrib-devel.sources.in \
+		> $(DESTDIR)/etc/apt/sources.list.d/qubes-contrib-devel.sources
 	sed "s/@DIST@/$(DIST)/" qubes-devel-$(DIST_NAME).sources.in \
 		> $(DESTDIR)/etc/apt/sources.list.d/qubes-devel.sources
 	install -d $(DESTDIR)/usr/share/keyrings
 	gpg --dearmor --output \
-		$(DESTDIR)/usr/share/keyrings/qubesos-contrib-release-4.3-debian.gpg \
-		qubesos-contrib-release-4.3-debian.asc
+		$(DESTDIR)/usr/share/keyrings/qubesos-contrib-release-devel-debian.pgp \
+		qubesos-contrib-release-devel-debian.asc
 	gpg --dearmor --output \
 		$(DESTDIR)/usr/share/keyrings/qubes-devel-debian.pgp \
 		qubes-devel-debian.asc
@@ -42,19 +42,19 @@ install-keys:
 
 install-dom0:
 	install -d $(DESTDIR)/etc/yum.repos.d $(DESTDIR)/usr/share/qubes/keys
-	install -m 0644 qubes-contrib-dom0-r4.3.repo.in $(DESTDIR)/etc/yum.repos.d/qubes-contrib-dom0-r4.3.repo
-	sed -i "s/@DIST@/$(DIST)/g" $(DESTDIR)/etc/yum.repos.d/qubes-contrib-dom0-r4.3.repo
+	sed "s/@DIST@/$(DIST)/g" qubes-contrib-dom0-devel.repo.in \
+		> $(DESTDIR)/etc/yum.repos.d/qubes-contrib-dom0-devel.repo
 	sed "s/@DIST@/$(DIST)/g" qubes-devel-host.repo.in \
 		> $(DESTDIR)/etc/yum.repos.d/qubes-devel-host.repo
 	install -d $(DESTDIR)/etc/pki/rpm-gpg/
-	install -m 0644 qubesos-contrib-release-4.3-host.asc $(DESTDIR)/etc/pki/rpm-gpg/RPM-GPG-KEY-qubes-4.3-contrib-host
+	install -m 0644 qubesos-contrib-release-devel-host.asc $(DESTDIR)/etc/pki/rpm-gpg/RPM-GPG-KEY-qubes-devel-contrib-host
 	install -m 0644 qubes-devel-host.asc $(DESTDIR)/etc/pki/rpm-gpg/RPM-GPG-KEY-qubes-devel-primary
 
 install-vm-fedora:
 	install -d $(DESTDIR)/etc/yum.repos.d $(DESTDIR)/usr/share/qubes/keys
-	install -m 0644 qubes-contrib-vm-r4.3.repo-fedora $(DESTDIR)/etc/yum.repos.d/qubes-contrib-vm-r4.3.repo
+	install -m 0644 qubes-contrib-vm-devel.repo-fedora $(DESTDIR)/etc/yum.repos.d/qubes-contrib-vm-devel.repo
 	sed "s/@DIST@/$(DIST)/g" qubes-devel-vm.repo-fedora \
 		> $(DESTDIR)/etc/yum.repos.d/qubes-devel-vm.repo
 	install -d $(DESTDIR)/etc/pki/rpm-gpg/
-	install -m 0644 qubesos-contrib-release-4.3-fedora.asc $(DESTDIR)/etc/pki/rpm-gpg/RPM-GPG-KEY-qubes-4.3-contrib-fedora
+	install -m 0644 qubesos-contrib-release-devel-fedora.asc $(DESTDIR)/etc/pki/rpm-gpg/RPM-GPG-KEY-qubes-devel-contrib-fedora
 	install -m 0644 qubes-devel-fedora.asc $(DESTDIR)/etc/pki/rpm-gpg/RPM-GPG-KEY-qubes-devel-fedora

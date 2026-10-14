@@ -116,8 +116,8 @@ make -C repos install-vm-%{local_dist_name} install-keys DESTDIR=$RPM_BUILD_ROOT
 /usr/share/qubes/keys/qubes-master-key.asc
 
 %files -n qubes-repo-contrib
-%config(noreplace) /etc/yum.repos.d/qubes-contrib-vm-r4.3.repo
-/etc/pki/rpm-gpg/RPM-GPG-KEY-qubes-4.3-contrib-%{local_dist_name}
+%config(noreplace) /etc/yum.repos.d/qubes-contrib-vm-devel.repo
+/etc/pki/rpm-gpg/RPM-GPG-KEY-qubes-devel-contrib-%{local_dist_name}
 
 %files -n qubes-repo-devel
 %config(noreplace) /etc/yum.repos.d/qubes-devel-vm.repo
@@ -132,13 +132,13 @@ make -C repos install-vm-%{local_dist_name} install-keys DESTDIR=$RPM_BUILD_ROOT
 %postun -n qubes-repo-contrib
 if [ $1 -eq 0 ] ; then
     systemd-run --timer-property=AccuracySec=1s --on-active=5s timeout 15m \
-     bash -c "while ! rpm -e gpg-pubkey-be71fab7-693c1ee1; do sleep 5; done" || :
+     bash -c "while ! rpm -e gpg-pubkey-830bed17-6acfb6c5; do sleep 5; done" || :
 fi
 
 %posttrans -n qubes-repo-contrib
 systemd-run --timer-property=AccuracySec=1s --on-active=5s timeout 15m bash -c \
- "while rpm -q gpg-pubkey-d0941e87-5d8c9210 && \
-    ! rpm -e gpg-pubkey-d0941e87-5d8c9210; do sleep 5; done" || :
+ "while rpm -q gpg-pubkey-be71fab7-693c1ee1 && \
+    ! rpm -e gpg-pubkey-be71fab7-693c1ee1; do sleep 5; done" || :
 
 %postun -n qubes-repo-devel
 if [ $1 -eq 0 ] ; then

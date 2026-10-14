@@ -1,0 +1,8 @@
+[qubes-contrib-dom0-devel-current-testing]
+name = Qubes OS Contrib Repository for dom0 (devel testing)
+baseurl = https://contrib.qubes-os.org/yum/devel/current-testing/host/@DIST@
+skip_if_unavailable=False
+enabled = 1
+metadata_expire = 6h
+gpgcheck = 1
+gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-qubes-devel-contrib-host

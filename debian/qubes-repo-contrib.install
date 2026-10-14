@@ -1,2 +1,2 @@
-etc/apt/sources.list.d/qubes-contrib-r4.3.list
-usr/share/keyrings/qubesos-contrib-release-4.3-debian.gpg
+etc/apt/sources.list.d/qubes-contrib-devel.sources
+usr/share/keyrings/qubesos-contrib-release-devel-debian.pgp

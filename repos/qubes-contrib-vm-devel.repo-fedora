@@ -1,0 +1,8 @@
+[qubes-contrib-vm-devel-current-testing]
+name = Qubes OS Contrib Repository for VM (devel testing)
+baseurl = https://contrib.qubes-os.org/yum/devel/current-testing/vm/fc$releasever
+skip_if_unavailable=False
+enabled = 1
+metadata_expire = 6h
+gpgcheck = 1
+gpgkey = file:///etc/pki/rpm-gpg/RPM-GPG-KEY-qubes-devel-contrib-fedora
