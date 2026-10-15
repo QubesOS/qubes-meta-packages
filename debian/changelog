@@ -1,3 +1,11 @@
+qubes-meta-packages (4.4.0-1) unstable; urgency=medium
+
+  [ Frédéric Pierret (fepitre) ]
+  * Add devel contrib keys
+  * Add definition of contrib devel repository
+
+ -- Marek Marczykowski-Górecki <marmarek@invisiblethingslab.com>  Thu, 15 Oct 2026 15:21:37 +0200
+
 qubes-meta-packages (4.3.9-1) unstable; urgency=medium
 
   * archlinux: move pipewire-qubes out of optdepends
