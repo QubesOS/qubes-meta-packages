@@ -73,6 +73,7 @@ Depends:
     qubes-gui-vnc,
     qubes-core-admin-client,
     qubes-artwork,
-    qubes-menus
+    qubes-menus,
+    qubes-desktop-linux-common-guivm
 Description: Meta package with packages required in a GuiVM
  This package depends on packages required to be installed in a GuiVM.
